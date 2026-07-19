@@ -8,9 +8,9 @@ public section
 /-!
 # Geometric sums of additive endomorphisms
 
-This companion to the foundational endomorphism API evaluates the ordinary
-ring-level geometric-series identity on an element. It is kept separate from
-`Mathlib.Algebra.Group.Hom.End` because it depends on geometric sums.
+This file gives pointwise versions of geometric-series identities for 
+additive endomorphisms. It is separate from `Mathlib.Algebra.Group.Hom.End`
+to avoid adding a dependency on geometric sums.
 -/
 
 namespace AddMonoidHom
@@ -22,7 +22,7 @@ variable {ι A B : Type*} [AddMonoid A] [AddCommMonoid B]
 /-- Evaluation of a finite sum of additive homomorphisms is the finite sum of
 their evaluations. This is the additive-hom analogue of `LinearMap.sum_apply`. -/
 theorem sum_apply (s : Finset ι) (f : ι → A →+ B) (x : A) :
-    (∑ i ∈ s, f i) x = ∑ i ∈ s, f i x := 
+    (∑ i ∈ s, f i) x = ∑ i ∈ s, f i x :=
   _root_.map_sum (AddMonoidHom.eval x) f s
 
 end AddMonoidHom
@@ -33,8 +33,7 @@ open Finset
 
 variable {A : Type*} [AddCommGroup A]
 
-/-- Evaluate `mul_geom_sum` on an element. The endomorphism identity remains the
-canonical algebraic theorem; this lemma packages only pointwise coercion glue. -/
+/-- Evaluate `mul_geom_sum` at an element. -/
 theorem apply_mul_geom_sum (φ : AddMonoid.End A) (n : ℕ) (x : A) :
     (φ - 1) (∑ i ∈ range n, (φ ^ i) x) = (φ ^ n - 1) x := by
   have h := congrArg (fun g : AddMonoid.End A ↦ g x) (mul_geom_sum φ n)
