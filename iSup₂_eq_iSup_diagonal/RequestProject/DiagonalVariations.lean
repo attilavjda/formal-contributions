@@ -150,33 +150,35 @@ generality points: the bare `ConditionallyCompleteLattice` needs a `Nonempty`/em
 section CondComplete
 variable {α : Type*} {ι : Sort*}
 /-- **`ConditionallyCompleteLattice`, empty/nonempty split.** The golfed cousin of
-`Diagonal.ciSup₂_eq_ciSup_diagonal`: the uniform bound `hbound` is produced in one `fun`-line, and
-each half of the antisymmetry is a single `ciSup_le`/`le_ciSup` chase. -/
+`Diagonal.ciSup₂_eq_ciSup_diagonal`: the single fact `hle` ("every entry is below the diagonal
+supremum") is produced in one `fun`-line and feeds both boundedness witnesses, after which each
+half of the antisymmetry is a single `ciSup_le`/`le_ciSup` chase. -/
 theorem cdiag_bdd [ConditionallyCompleteLattice α] (f : ι → ι → α)
     (hf : BddAbove (Set.range fun k => f k k)) (h : ∀ i j, ∃ k, f i j ≤ f k k) :
     (⨆ i, ⨆ j, f i j) = ⨆ k, f k k := by
   cases isEmpty_or_nonempty ι
   · rw [iSup_of_empty', iSup_of_empty']
-  · obtain ⟨b, hb⟩ := id hf
-    have hbound : ∀ i j, f i j ≤ b := fun i j => (h i j).choose_spec.trans (hb ⟨_, rfl⟩)
-    refine le_antisymm (ciSup_le fun i => ciSup_le fun j => ?_) (ciSup_le fun k => ?_)
-    · obtain ⟨k, hk⟩ := h i j; exact hk.trans (le_ciSup hf k)
-    · refine le_ciSup_of_le ⟨b, ?_⟩ k (le_ciSup ⟨b, ?_⟩ k)
-      · rintro _ ⟨i, rfl⟩; exact ciSup_le fun j => hbound i j
-      · rintro _ ⟨j, rfl⟩; exact hbound k j
+  · have hle : ∀ i j, f i j ≤ ⨆ k, f k k := fun i j =>
+      (h i j).choose_spec.trans (le_ciSup hf _)
+    have hrow : ∀ i, BddAbove (Set.range (f i)) := fun i => ⟨_, Set.forall_mem_range.2 (hle i)⟩
+    have hcol : BddAbove (Set.range fun i => ⨆ j, f i j) :=
+      ⟨_, Set.forall_mem_range.2 fun i => ciSup_le (hle i)⟩
+    exact le_antisymm (ciSup_le fun i => ciSup_le (hle i))
+      (ciSup_le fun k => le_ciSup_of_le hcol k (le_ciSup (hrow k) k))
 /-- **`ConditionallyCompleteLinearOrderBot`, no `Nonempty` needed.** Same shape as `cdiag_bdd` but
 with the primed `ciSup_le'` lemmas, which do not require the index to be nonempty (the empty
-supremum is `⊥`). This is the golfed form of `Diagonal.ciSup₂_eq_ciSup_diagonal'`. -/
+supremum is `⊥`). Kept here only as a style sample: `Diagonal.ciSup₂_eq_ciSup_diagonal` already
+proves this statement, since it needs no `Nonempty` hypothesis (see `GOLF.md`). -/
 theorem cdiag_bdd_bot [ConditionallyCompleteLinearOrderBot α] (f : ι → ι → α)
     (hf : BddAbove (Set.range fun k => f k k)) (h : ∀ i j, ∃ k, f i j ≤ f k k) :
     (⨆ i, ⨆ j, f i j) = ⨆ k, f k k := by
-  obtain ⟨b, hb⟩ := id hf
-  have hbound : ∀ i j, f i j ≤ b := fun i j => (h i j).choose_spec.trans (hb ⟨_, rfl⟩)
-  refine le_antisymm (ciSup_le' fun i => ciSup_le' fun j => ?_) (ciSup_le' fun k => ?_)
-  · obtain ⟨k, hk⟩ := h i j; exact hk.trans (le_ciSup hf k)
-  · refine le_ciSup_of_le ⟨b, ?_⟩ k (le_ciSup ⟨b, ?_⟩ k)
-    · rintro _ ⟨i, rfl⟩; exact ciSup_le' fun j => hbound i j
-    · rintro _ ⟨j, rfl⟩; exact hbound k j
+  have hle : ∀ i j, f i j ≤ ⨆ k, f k k := fun i j =>
+    (h i j).choose_spec.trans (le_ciSup hf _)
+  have hrow : ∀ i, BddAbove (Set.range (f i)) := fun i => ⟨_, Set.forall_mem_range.2 (hle i)⟩
+  have hcol : BddAbove (Set.range fun i => ⨆ j, f i j) :=
+    ⟨_, Set.forall_mem_range.2 fun i => ciSup_le' (hle i)⟩
+  exact le_antisymm (ciSup_le' fun i => ciSup_le' (hle i))
+    (ciSup_le' fun k => le_ciSup_of_le hcol k (le_ciSup (hrow k) k))
 end CondComplete
 /-! ## §4. The `+` callers
 The whole reason the diagonal lemma exists: `iSup f + iSup g` distributes into a double supremum,

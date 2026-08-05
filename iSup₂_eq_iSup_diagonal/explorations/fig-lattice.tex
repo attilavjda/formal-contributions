@@ -1,0 +1,312 @@
+\section{The statement, drawn}
+
+Everything in \lean{RequestProject/Diagonal.lean} orbits one picture: a doubly indexed
+family $F : \iota \to \iota \to \alpha$ is a \emph{square} of lattice elements, and the
+hypothesis
+\[
+  h : \forall i\, j,\ \exists k,\ F_{ij} \le F_{kk}
+\]
+says that the \emph{diagonal} of that square is cofinal in it.  The conclusion
+$\Sup_i \Sup_j F_{ij} = \Sup_k F_{kk}$ says the square and its diagonal have the same
+supremum.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[x=1.25cm,y=1.25cm]
+  \foreach \i in {1,...,4}{
+    \foreach \j in {1,...,4}{
+      \ifnum\i=\j
+        \node[diagcell] (c\i\j) at (\j,-\i) {$F_{\i\i}$};
+      \else
+        \node[cell] (c\i\j) at (\j,-\i) {$F_{\i\j}$};
+      \fi
+    }
+  }
+  % index labels
+  \foreach \j in {1,...,4}{\node[font=\scriptsize] at (\j,-0.35) {$j=\j$};}
+  \foreach \i in {1,...,4}{\node[font=\scriptsize] at (0.25,-\i) {$i=\i$};}
+  % domination arrows: every cell is below some diagonal cell
+  \draw[dom,bend left=25] (c12) to (c22);
+  \draw[dom,bend left=20] (c13) to (c33);
+  \draw[dom,bend left=15] (c14) to (c44);
+  \draw[dom,bend right=25] (c21) to (c22);
+  \draw[dom,bend left=20] (c24) to (c44);
+  \draw[dom,bend right=20] (c31) to (c33);
+  \draw[dom,bend right=18] (c42) to (c44);
+  \draw[dom,bend left=18] (c34) to (c44);
+  \node[font=\footnotesize,text=diagcol,align=left,anchor=west]
+    at (4.9,-1.4) {$h$ : every cell of the square\\ is $\le$ \emph{some} diagonal cell};
+  \node[font=\footnotesize,align=left,anchor=west]
+    at (4.9,-3.4) {so the diagonal is \textbf{cofinal}\\ in the square, and\\[3pt]
+      $\displaystyle\Sup_{i}\Sup_{j} F_{ij}\;=\;\Sup_{k} F_{kk}.$};
+\end{tikzpicture}
+\caption{The diagonal hypothesis of \lean{Golf.iSup2\_eq\_iSup\_diagonal} as a
+combinatorial statement about a square: the red cells absorb everything.}
+\end{figure}
+
+\subsection{Three readings of the same supremum}
+
+The proof of the collapse factors through a change of index: first the square is read as
+one family over the product index (\lean{Golf.iSup\_pprod}, \emph{currying}), then the
+diagonal is shown cofinal in it (\lean{Golf.iSup\_eq\_iSup\_of\_cofinal}).
+
+\begin{figure}[ht]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[x=.62cm,y=.62cm,font=\scriptsize]
+  % --- panel 1 : rows then columns
+  \begin{scope}
+    \foreach \i in {1,...,4}{\foreach \j in {1,...,4}{
+      \fill[softgrey,draw=black!20] (\j-.45,-\i-.45) rectangle (\j+.45,-\i+.45);}}
+    \foreach \i in {1,...,4}{
+      \draw[rounded corners=3pt,tagstructural,line width=.8pt]
+        (0.6,-\i-.35) rectangle (4.4,-\i+.35);}
+    \node at (2.5,-5.4) {$\displaystyle\Sup_i\Bigl(\Sup_j F_{ij}\Bigr)$};
+    \node[font=\scriptsize\itshape,text=tagstructural] at (2.5,0.15) {rows, then column};
+  \end{scope}
+  % --- equals
+  \node at (6.4,-2.5) {$=$};
+  % --- panel 2 : whole square at once
+  \begin{scope}[xshift=7.9cm]
+    \foreach \i in {1,...,4}{\foreach \j in {1,...,4}{
+      \fill[softgrey,draw=black!20] (\j-.45,-\i-.45) rectangle (\j+.45,-\i+.45);}}
+    \draw[rounded corners=4pt,tagstructural,line width=.9pt]
+      (0.5,-4.55) rectangle (4.5,-0.45);
+    \node at (2.5,-5.4) {$\displaystyle\Sup_{p : \iota\times\iota} F_{p_1 p_2}$};
+    \node[font=\scriptsize\itshape,text=tagstructural] at (2.5,0.15) {currying};
+  \end{scope}
+  \node at (14.3,-2.5) {$=$};
+  % --- panel 3 : diagonal only
+  \begin{scope}[xshift=15.8cm]
+    \foreach \i in {1,...,4}{\foreach \j in {1,...,4}{
+      \ifnum\i=\j
+        \fill[diagcol!20,draw=diagcol!60] (\j-.45,-\i-.45) rectangle (\j+.45,-\i+.45);
+      \else
+        \fill[white,draw=black!12] (\j-.45,-\i-.45) rectangle (\j+.45,-\i+.45);
+      \fi}}
+    \node at (2.5,-5.4) {$\displaystyle\Sup_k F_{kk}$};
+    \node[font=\scriptsize\itshape,text=diagcol] at (2.5,0.15) {cofinal diagonal};
+  \end{scope}
+\end{tikzpicture}}
+\caption{The two structural steps of the development.  The first equality is
+\lean{iSup\_pprod} (true always); the second is \lean{iSup\_eq\_iSup\_of\_cofinal}
+(true under $h$).}
+\end{figure}
+
+\subsection{The lattice picture of \texttt{le\_antisymm}}
+
+Both structural lemmas are proved by antisymmetry: two families with a supremum each,
+and two cofinality arrows.  As a Hasse diagram, the proof squeezes two elements
+together.
+
+\begin{figure}[ht]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[x=1.5cm,y=1.25cm]
+  \node[latticept,label=above:{$\Sup_i f_i$}] (sf) at (0,2) {};
+  \node[latticept,label=above:{$\Sup_j g_j$}] (sg) at (3,2) {};
+  \node[latticept,label=left:{$f_i$}] (fi) at (-0.6,0.6) {};
+  \node[latticept,label=left:{$f_{i'}$}] (fi2) at (0.5,0.2) {};
+  \node[latticept,label=right:{$g_j$}] (gj) at (3.6,0.6) {};
+  \node[latticept,label=right:{$g_{j'}$}] (gj2) at (2.5,0.2) {};
+  \node[latticept,label=below:{$\bot$}] (bot) at (1.5,-0.9) {};
+  \draw[ord] (fi) -- (sf); \draw[ord] (fi2) -- (sf);
+  \draw[ord] (gj) -- (sg); \draw[ord] (gj2) -- (sg);
+  \draw[ord] (bot) -- (fi); \draw[ord] (bot) -- (fi2);
+  \draw[ord] (bot) -- (gj); \draw[ord] (bot) -- (gj2);
+  \draw[dom,bend left=18] (fi) to node[above,font=\scriptsize,pos=.5]{$h_1$} (gj);
+  \draw[dom,bend left=18] (gj2) to node[below,font=\scriptsize,pos=.5]{$h_2$} (fi2);
+  \draw[{Stealth[length=2mm]}-{Stealth[length=2mm]},bridgecol,line width=.9pt]
+    (sf) to node[above,font=\scriptsize,text=bridgecol]{$=$} (sg);
+  \node[align=left,font=\footnotesize,anchor=west] at (4.6,1.1)
+    {\lean{iSup\_eq\_iSup\_of\_cofinal}\\[2pt]
+     $\le$\;:\;\lean{iSup\_mono' h₁}\\
+     $\ge$\;:\;\lean{iSup\_mono' h₂}\\[2pt]
+     two arrows, no witnesses};
+\end{tikzpicture}}
+\caption{Mutual cofinality forces equality of suprema: each element of one family
+has an upper bound in the other, so neither supremum can be the larger.}
+\end{figure}
+
+\subsection{A concrete instance: $\enn$ and the sum of two suprema}
+
+The headline application $(\Sup_i f_i)+(\Sup_j g_j) = \Sup_k (f_k+g_k)$ is the square of
+sums $F_{ij}=f_i+g_j$: monotone $f,g$ over a directed index make the diagonal cofinal.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[x=1.16cm,y=1.0cm,font=\scriptsize]
+  \foreach \i/\fv in {1/1,2/3,3/4,4/6}{
+    \foreach \j/\gv in {1/0,2/2,3/5,4/7}{
+      \pgfmathtruncatemacro{\s}{\fv+\gv}
+      \ifnum\i=\j
+        \node[diagcell] (d\i\j) at (\j,-\i) {$\s$};
+      \else
+        \node[cell] (d\i\j) at (\j,-\i) {$\s$};
+      \fi
+    }
+  }
+  \foreach \j/\gv in {1/0,2/2,3/5,4/7}{\node at (\j,-0.35) {$g_\j=\gv$};}
+  \foreach \i/\fv in {1/1,2/3,3/4,4/6}{\node at (-0.05,-\i) {$f_\i=\fv$};}
+  \node[font=\footnotesize,align=left,anchor=west] at (5.0,-1.3)
+    {$f,g$ monotone $\Rightarrow$ the largest entry\\
+     of the square is the last diagonal one:};
+  \node[font=\footnotesize,anchor=west] at (5.0,-2.6)
+    {$\max_{ij} (f_i+g_j) = f_4+g_4 = 13$};
+  \node[font=\footnotesize,align=left,anchor=west] at (5.0,-3.7)
+    {\lean{ennreal\_iSup\_add\_iSup},\\ \lean{enat\_iSup\_add\_iSup},\\
+     \lean{cardinal\_ciSup\_add\_ciSup\_diagonal}};
+  \draw[dom,bend left=20] (d14) to (d44);
+  \draw[dom,bend right=20] (d41) to (d44);
+  \draw[dom,bend left=20] (d13) to (d33);
+\end{tikzpicture}
+\caption{A numerical square of sums.  Monotonicity of the two families is exactly what
+makes the red diagonal absorb the square, which is why
+\lean{ennreal\_iSup\_add\_iSup\_of\_monotone} needs no diagonal hypothesis.}
+\end{figure}
+
+\subsection{Where boundedness enters}
+
+In a \emph{conditionally} complete lattice a supremum only behaves well below a ceiling.
+The development is arranged so that the ceiling is used exactly once, in
+\lean{Golf.ciSup\_pprod}; everything downstream inherits it.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[x=1.0cm,y=1.0cm,font=\footnotesize]
+  \fill[tagstructural!7,rounded corners=3pt] (-0.3,-0.35) rectangle (10.1,3.35);
+  \draw[line width=1pt,tagstructural] (-0.1,3.0) -- (9.9,3.0);
+  \node[font=\scriptsize,text=tagstructural,anchor=south east] at (9.9,3.03)
+    {an upper bound for the diagonal $\{F_{kk}\}$};
+  % the diagonal: a rising red staircase, with its envelope
+  \draw[diagcol!50,dashed,line width=.7pt]
+    (0.7,0.55) -- (2.0,1.15) -- (3.3,1.65) -- (4.6,2.05) -- (5.9,2.35) --
+    (7.2,2.55) -- (8.5,2.7);
+  \foreach \k/\x/\y in {1/0.7/0.55,2/2.0/1.15,3/3.3/1.65,4/4.6/2.05,5/5.9/2.35,
+                        6/7.2/2.55,7/8.5/2.7}{
+    \fill[diagcol] (\x,\y) circle (2.4pt);
+    \node[font=\tiny,text=diagcol,below=1.5pt] at (\x,\y) {$F_{\k\k}$};}
+  % entries of the square: all under the envelope
+  \foreach \x/\y in {0.4/0.25,1.2/0.7,1.7/0.35,2.4/1.0,2.9/0.6,3.6/1.4,4.1/0.95,
+                     4.9/1.8,5.4/1.25,6.2/2.15,6.7/1.6,7.5/2.4,8.0/1.95,8.8/2.5,
+                     9.3/2.2,5.0/0.5,3.0/1.3,7.9/1.1}{
+    \fill[black!40] (\x,\y) circle (1.7pt);}
+  \draw[dom,bend left=18] (4.9,1.8) to (5.9,2.35);
+  \draw[dom,bend left=18] (2.4,1.0) to (3.3,1.65);
+  \node[font=\scriptsize,text=black!55,anchor=west] at (0.0,-0.05)
+    {grey: entries $F_{ij}$ of the square \quad red: the diagonal $F_{kk}$};
+\end{tikzpicture}
+\caption{Boundedness travels \emph{down} cofinality.  \lean{bddAbove\_range\_uncurry}
+turns the diagonal hypothesis into \lean{isCofinalFor\_range\_iff} and then applies
+\lean{IsCofinalFor.bddAbove}, transporting one ceiling from the diagonal to the whole
+square.  That single transport is what feeds \lean{ciSup\_pprod}, \lean{bddAbove\_row}
+and \lean{bddAbove\_range\_ciSup\_row}: the user of
+\lean{ciSup₂\_eq\_ciSup\_diagonal} only ever has to bound the diagonal.}
+\end{figure}
+
+\subsection{Two concrete lattices}
+
+The Boolean lattice $2^{\{a,b,c\}}$ makes the collapse tangible: take the two chains
+$f = (\{a\},\{a,b\})$ and $g = (\{c\},\{b,c\})$.  Every join $f_i \sqcup g_j$ lies below
+the last diagonal join $f_2 \sqcup g_2 = \{a,b,c\}$, so the double supremum collapses.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[x=1.5cm,y=1.35cm,font=\scriptsize]
+  \node[latticept,label=below:{$\emptyset$}]            (e)   at (0,0)  {};
+  \node[latticept,label=left:{$\{a\}$}]                 (a)   at (-1,1) {};
+  \node[latticept,label=left:{$\{b\}$}]                 (b)   at (0,1)  {};
+  \node[latticept,label=right:{$\{c\}$}]                (c)   at (1,1)  {};
+  \node[latticept,label=left:{$\{a,b\}$}]               (ab)  at (-1,2) {};
+  \node[latticept,label=left:{$\{a,c\}$}]               (ac)  at (0,2)  {};
+  \node[latticept,label=right:{$\{b,c\}$}]              (bc)  at (1,2)  {};
+  \node[latticept,label=above:{$\{a,b,c\}$}]            (abc) at (0,3)  {};
+  \foreach \x/\y in {e/a,e/b,e/c,a/ab,a/ac,b/ab,b/bc,c/ac,c/bc,ab/abc,ac/abc,bc/abc}
+    {\draw[ord] (\x) -- (\y);}
+  \foreach \n in {a,ab}{\draw[tagstructural,line width=1.2pt] (\n) circle (4.5pt);}
+  \foreach \n in {c,bc}{\draw[tagreducible,line width=1.2pt] (\n) circle (6.5pt);}
+  \node[font=\scriptsize,text=tagstructural,anchor=west] at (1.6,2.6)
+    {$f_1=\{a\}$, $f_2=\{a,b\}$};
+  \node[font=\scriptsize,text=tagreducible,anchor=west] at (1.6,2.2)
+    {$g_1=\{c\}$, $g_2=\{b,c\}$};
+  \node[font=\scriptsize,anchor=west,align=left] at (1.6,1.2)
+    {$f_1\sqcup g_1=\{a,c\}$\\
+     $f_1\sqcup g_2=f_2\sqcup g_1=f_2\sqcup g_2=\{a,b,c\}$\\[3pt]
+     every join $\le$ the diagonal join $f_2\sqcup g_2$,\\
+     so $\Sup_i\Sup_j (f_i\sqcup g_j)=\Sup_k (f_k\sqcup g_k)$};
+\end{tikzpicture}
+\caption{The diagonal hypothesis holds automatically here because both families are
+monotone and the index order is directed --- the situation of
+\lean{ennreal\_iSup\_add\_iSup\_of\_monotone} and
+\lean{cardinal\_ciSup\_add\_ciSup\_of\_monotone}.}
+\end{figure}
+
+The hypothesis is not decoration.  In the three-element chain $0 < 1 < 2$, put
+$F_{11}=F_{22}=0$ and $F_{12}=F_{21}=2$: no diagonal entry dominates $F_{12}$, and the
+conclusion fails.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[x=1.2cm,y=1.1cm,font=\footnotesize]
+  % the chain
+  \node[latticept,label=left:{$0$}] (z) at (0,0) {};
+  \node[latticept,label=left:{$1$}] (o) at (0,1.2) {};
+  \node[latticept,label=left:{$2$}] (t) at (0,2.4) {};
+  \draw[ord] (z) -- (o) -- (t);
+  \node[font=\scriptsize,text=black!55] at (0,-0.8) {$\alpha = \{0<1<2\}$};
+  % the square
+  \begin{scope}[xshift=3.1cm,yshift=1.8cm]
+    \node[diagcell] (m11) at (0,0)     {$0$};
+    \node[cell]     (m12) at (1.1,0)   {$2$};
+    \node[cell]     (m21) at (0,-1.1)  {$2$};
+    \node[diagcell] (m22) at (1.1,-1.1){$0$};
+    \node[font=\scriptsize] at (0,0.75)   {$j=1$};
+    \node[font=\scriptsize] at (1.1,0.75) {$j=2$};
+    \node[font=\scriptsize] at (-0.95,0)   {$i=1$};
+    \node[font=\scriptsize] at (-0.95,-1.1){$i=2$};
+  \end{scope}
+  \node[anchor=west,align=left] at (5.6,1.3)
+    {$\Sup_i\Sup_j F_{ij} = 2$\\[2pt]
+     $\Sup_k F_{kk} = 0$};
+  \node[anchor=west,align=left,text=diagcol] at (5.6,-0.1)
+    {the hypothesis fails at $(i,j)=(1,2)$:\\
+     no $k$ has $F_{12} \le F_{kk}$};
+\end{tikzpicture}
+\caption{Why \lean{Golf.iSup₂\_eq\_iSup\_diagonal} needs its hypothesis.  Formally, the
+$\ge$ direction is free (\lean{iSup\_mono'} with the witness $\langle k,k\rangle$); it is
+the $\le$ direction that consumes $h$.}
+\end{figure}
+
+\subsection{The analytic corollary: a monotone staircase}
+
+For monotone $f,g : \mathbb{N} \to \enn$ the diagonal family $k \mapsto f_k+g_k$ is
+monotone too, so it converges to its supremum --- which, by the collapse, is
+$(\Sup_i f_i)+(\Sup_j g_j)$.  That is \lean{Golf.ennreal\_tendsto\_add\_atTop}.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[x=1.15cm,y=1.5cm,font=\scriptsize]
+  \draw[->,black!60] (-0.2,0) -- (8.4,0) node[right] {$k$};
+  \draw[->,black!60] (-0.2,0) -- (-0.2,2.9) node[above] {};
+  \draw[diagcol,dashed,line width=.8pt] (-0.2,2.45) -- (8.2,2.45)
+    node[right=-1pt,anchor=west,text=diagcol,xshift=2pt] {};
+  \node[anchor=south east,text=diagcol,font=\scriptsize] at (8.2,2.47)
+    {$(\Sup_i f_i)+(\Sup_j g_j) \;=\; \Sup_k (f_k+g_k)$};
+  % staircase of f_k + g_k
+  \draw[tagglue,line width=1pt]
+    (0,0.6) -- (1,0.6) -- (1,1.15) -- (2,1.15) -- (2,1.55) -- (3,1.55) --
+    (3,1.85) -- (4,1.85) -- (4,2.07) -- (5,2.07) -- (5,2.22) -- (6,2.22) --
+    (6,2.32) -- (7,2.32) -- (7,2.39) -- (8,2.39);
+  \foreach \x/\y in {0/0.6,1/1.15,2/1.55,3/1.85,4/2.07,5/2.22,6/2.32,7/2.39}{
+    \fill[tagglue] (\x,\y) circle (1.7pt);}
+  \foreach \x in {0,...,7}{\node[below,font=\tiny,text=black!60] at (\x,0) {\x};}
+  \node[text=tagglue,anchor=west,font=\scriptsize] at (1.15,0.85) {$k \mapsto f_k+g_k$};
+  \node[anchor=west,align=left,font=\scriptsize] at (4.3,0.9)
+    {\lean{tendsto\_atTop\_iSup}\\ applied to \lean{hf.add hg}};
+\end{tikzpicture}
+\caption{The collapse is what identifies the limit of the diagonal sequence with the sum
+of the two separate suprema; without it one only gets convergence to
+$\Sup_k (f_k+g_k)$.}
+\end{figure}
+
+\clearpage

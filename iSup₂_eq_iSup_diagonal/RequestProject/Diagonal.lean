@@ -41,68 +41,41 @@ cofinal. -/
 theorem iSup₂_eq_diagonal {α : Type*} {ι : Sort*} [CompleteSemilatticeSup α]
     (f : ι → ι → α) (h : ∀ i j, ∃ k, f i j ≤ f k k) :
     (⨆ i, ⨆ j, f i j) = ⨆ k, f k k := by
-  apply le_antisymm
-  · apply sSup_le
-    rintro _ ⟨i, rfl⟩
-    apply sSup_le
+  refine le_antisymm (sSup_le ?_) (sSup_le ?_) <;> rintro _ ⟨i, rfl⟩
+  · refine sSup_le ?_
     rintro _ ⟨j, rfl⟩
     obtain ⟨k, hk⟩ := h i j
     exact hk.trans (le_sSup ⟨k, rfl⟩)
-  · apply sSup_le
-    rintro _ ⟨k, rfl⟩
-    exact (le_sSup (s := range (f k)) ⟨k, rfl⟩).trans
-      (le_sSup (s := range fun i ↦ ⨆ j, f i j) ⟨k, rfl⟩)
+  · exact (le_sSup (s := range (f i)) ⟨i, rfl⟩).trans (le_sSup ⟨i, rfl⟩)
 
 /-- A conditionally complete lattice version of `iSup₂_eq_diagonal`: a doubly indexed
-supremum equals the supremum along its diagonal when the diagonal is cofinal and bounded above. -/
+supremum equals the supremum along its diagonal when the diagonal is cofinal and bounded above.
+
+No `Nonempty ι` hypothesis is needed: for empty `ι` both sides are `sSup ∅`. -/
 theorem ciSup₂_eq_ciSup_diagonal {α : Type*} {ι : Sort*} [ConditionallyCompleteLattice α]
     (f : ι → ι → α) (hf : BddAbove (Set.range fun k ↦ f k k))
     (h : ∀ i j, ∃ k, f i j ≤ f k k) :
     (⨆ i, ⨆ j, f i j) = ⨆ k, f k k := by
   cases isEmpty_or_nonempty ι
   · rw [iSup_of_empty', iSup_of_empty']
-  · obtain ⟨b, hb⟩ := id hf
-    have hbound : ∀ i j, f i j ≤ b := by
-      intro i j
-      obtain ⟨k, hk⟩ := h i j
-      exact hk.trans (hb ⟨k, rfl⟩)
-    apply le_antisymm
-    · apply ciSup_le
-      intro i
-      apply ciSup_le
-      intro j
-      obtain ⟨k, hk⟩ := h i j
-      exact hk.trans (le_ciSup hf k)
-    · apply ciSup_le
-      intro k
-      refine le_ciSup_of_le ?_ k ?_
-      · exact ⟨b, by rintro _ ⟨i, rfl⟩; exact ciSup_le (fun j => hbound i j)⟩
-      · exact le_ciSup ⟨b, by rintro _ ⟨j, rfl⟩; exact hbound k j⟩ k
+  · -- The central fact: every entry is below the diagonal supremum, `f i j ≤ ⨆ k, f k k`. It is
+    -- the only place `hf` is used, and it yields the two boundedness facts and both inequalities.
+    have hle : ∀ i j, f i j ≤ ⨆ k, f k k := fun i j ↦
+      let ⟨k, hk⟩ := h i j; hk.trans (le_ciSup hf k)
+    have hrow : ∀ i, BddAbove (Set.range (f i)) := fun i ↦ ⟨_, Set.forall_mem_range.2 (hle i)⟩
+    have hcol : BddAbove (Set.range fun i ↦ ⨆ j, f i j) :=
+      ⟨_, Set.forall_mem_range.2 fun i ↦ ciSup_le (hle i)⟩
+    exact le_antisymm (ciSup_le fun i ↦ ciSup_le (hle i))
+      (ciSup_le fun k ↦ le_ciSup_of_le hcol k (le_ciSup (hrow k) k))
 
-/-- A conditionally complete linear order with a bottom element version of
-`iSup₂_eq_diagonal`. Here the `Nonempty` assumption on the index is unnecessary, since the
-empty supremum is `⊥`. -/
+/-- The `ConditionallyCompleteLinearOrderBot` version is not a separate lemma: since
+`ciSup₂_eq_ciSup_diagonal` needs no `Nonempty` hypothesis, it is literally the same statement,
+specialised along `ConditionallyCompleteLinearOrderBot → ConditionallyCompleteLattice`. -/
 theorem ciSup₂_eq_ciSup_diagonal' {α : Type*} {ι : Sort*} [ConditionallyCompleteLinearOrderBot α]
     (f : ι → ι → α) (hf : BddAbove (Set.range fun k ↦ f k k))
     (h : ∀ i j, ∃ k, f i j ≤ f k k) :
-    (⨆ i, ⨆ j, f i j) = ⨆ k, f k k := by
-  obtain ⟨b, hb⟩ := id hf
-  have hbound : ∀ i j, f i j ≤ b := by
-    intro i j
-    obtain ⟨k, hk⟩ := h i j
-    exact hk.trans (hb ⟨k, rfl⟩)
-  apply le_antisymm
-  · apply ciSup_le'
-    intro i
-    apply ciSup_le'
-    intro j
-    obtain ⟨k, hk⟩ := h i j
-    exact hk.trans (le_ciSup hf k)
-  · apply ciSup_le'
-    intro k
-    refine le_ciSup_of_le ?_ k ?_
-    · exact ⟨b, by rintro _ ⟨i, rfl⟩; exact ciSup_le' (fun j => hbound i j)⟩
-    · exact le_ciSup ⟨b, by rintro _ ⟨j, rfl⟩; exact hbound k j⟩ k
+    (⨆ i, ⨆ j, f i j) = ⨆ k, f k k :=
+  ciSup₂_eq_ciSup_diagonal f hf h
 
 /-- The existing `ENat.iSup_add_iSup` proof reduced to the generic diagonal lemma. -/
 theorem enat_iSup_add_iSup_via_diagonal {ι : Type*} {f g : ι → ENat}

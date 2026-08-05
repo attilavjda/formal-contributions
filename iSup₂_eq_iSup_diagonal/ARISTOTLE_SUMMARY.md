@@ -1,3 +1,188 @@
+# Summary of changes for run 09a163ac-00ca-4f45-8f86-41165f2e8fca
+Done — the `ciSup` diagonal lemma is refactored as requested, and the whole project still builds with no `sorry` (only the standard axioms `propext`, `Classical.choice`, `Quot.sound`).
+
+**The rename you asked for.** In every live copy of the conditionally complete diagonal-collapse proof, the central fact is now named `hle` and kept in term mode:
+
+```lean
+-- The central fact: every entry is below the diagonal supremum, `f i j ≤ ⨆ k, f k k`.
+-- It bounds each row (`hrow`), the family of row suprema (`hcol`), and both halves of the
+-- antisymmetry.
+have hle : ∀ i j, f i j ≤ ⨆ k, f k k := fun i j ↦
+  let ⟨k, hk⟩ := h i j; hk.trans (le_ciSup hf k)
+have hrow : ∀ i, BddAbove (range (f i)) := fun i ↦ ⟨_, forall_mem_range.2 (hle i)⟩
+have hcol : BddAbove (range fun i ↦ ⨆ j, f i j) :=
+  ⟨_, forall_mem_range.2 fun i ↦ ciSup_le (hle i)⟩
+```
+
+The proof term is unchanged, so the statements and the compiled proofs are the same; only the name and a short explanatory comment were added.
+
+**Golf, applied consistently.** Several older copies still bounded everything by an anonymous `b` obtained from `hf` (`obtain ⟨b, hb⟩ := id hf; have key : ∀ i j, f i j ≤ b := …`). Since the diagonal supremum is itself the least such bound and already appears in the goal, those proofs were rewritten to the `hle` form: the `obtain`, the re-packaged `⟨b, …⟩` witnesses and the `refine … ?_ ?_` bullet split disappear, and each proof ends in a single `exact le_antisymm …`. Where the neighbouring lemma `ciSup_mono_of_forall_exists` was already being reused for the `≤` half, that reuse is preserved.
+
+Files updated:
+- `RequestProject/ReviewerCCLRequest.lean` — both requested versions (`ConditionallyCompleteLattice` and the `'`/`…Bot` copy) renamed to `hle`, comments added.
+- `RequestProject/CiSupDiagonalPR2.lean` — the upstream form (§2) and the annotated walkthrough (§4) renamed, including the prose; the "as submitted" §1 is untouched, and the `rfl` checks tying the versions together still hold.
+- `RequestProject/PR2.lean`, `RequestProject/PRContents.lean`, `RequestProject/NextPR.lean`, `RequestProject/Diagonal.lean`, `RequestProject/DiagonalVariations.lean` — the `b`-based proofs golfed to the `hle` form, with the surrounding prose (including the `IsCofinalFor.bddAbove` discussion in `PR2.lean`) adjusted so it still describes the code.
+- Documentation/patch snippets kept in sync: `REVIEWER_CCL_REQUEST.md`, `GOLF.md`, `GOLF.patch` (hunk line count updated), `PR_SPLIT.md`.
+
+Everything is committed and pushed.
+
+# Summary of changes for run f84190e3-7ca1-425e-9851-700b74137214
+**What the reviewer means** (full write-up in `REVIEWER_CCL_REQUEST.md`, everything in it machine-checked by the new file `RequestProject/ReviewerCCLRequest.lean`, which builds with no `sorry` and only the standard axioms):
+
+1. **"versions"** — the lemma you extracted from the duplicated `ENat`/`ENNReal` `iSup_add_iSup` proofs is stated for complete lattices, i.e. exactly the two types you deduplicated. The reviewer wants the same diagonal-collapse statement for orders where suprema exist only for bounded families, where the free boundedness becomes an explicit hypothesis: `ciSup₂_eq_ciSup_diagonal (f) (hf : BddAbove (range fun k ↦ f k k)) (h : ∀ i j, ∃ k, f i j ≤ f k k) : ⨆ i, ⨆ j, f i j = ⨆ k, f k k`. Only the diagonal need be assumed bounded — cofinality then bounds the rows and the row suprema (checked).
+
+2. **The two typeclasses** — the standard pair used throughout `Mathlib/Order/ConditionallyCompleteLattice/Indexed.lean`: an unprimed lemma in the `ConditionallyCompleteLattice` section (needs `[Nonempty ι]`, uses `ciSup_le`/`le_ciSup`) and a `'`-suffixed copy in the `ConditionallyCompleteLinearOrderBot` section (no `Nonempty`, uses `ciSup_le'`, since `⨆` over an empty index is `⊥` there rather than the junk value `sSup ∅`).
+
+3. **The two lemmas cited** are the template to imitate — same file, same naming convention, same hypothesis shape — and are also literally the `≤` half of your proof: `ciSup_le fun i ↦ ciSup_mono_of_forall_exists hf (h i)`, so they should be reused, not re-proved.
+
+4. **A point to reply with**: for the template pair the primed version is genuinely stronger (two different families; for empty `ι` the LHS is junk). For the diagonal collapse both sides are `sSup ∅` at once, so `[Nonempty ι]` can be dropped from the general version — and then the `…Bot` version is literally the same statement specialised along `ConditionallyCompleteLinearOrderBot → ConditionallyCompleteLattice`. This is verified in Lean: the `…Bot` statement is closed by `exact ciSup₂_eq_ciSup_diagonal f hf h`, and the two proof terms are `rfl`-equal. Both forms are provided so either can be posted.
+
+5. **Callers on the conditionally complete side**, so the addition is not an isolated convenience lemma: `Cardinal.ciSup_add_ciSup_diagonal` (proved through the new lemma; `Cardinal` has no greatest element, verified, so the complete-lattice lemma cannot serve it), an `ℝ≥0` monotone-family instance with `k = max i j`, and a re-proof of the `ℕ∞` shape showing the conditionally complete lemma still covers the original call sites.
+
+The pinned Mathlib here has the `…Bot` member of the cited pair under its former name `ciSup_mono'`; the Lean file restates both members under the reviewer's names and checks the primed one against `ciSup_mono'`. Also included: the exact code block to paste into the PR. All work is committed and pushed; `ARISTOTLE_SUMMARY.md` was not modified.
+
+# Summary of changes for run 15abd770-1457-441c-adae-5d7e02ce86be
+I grepped Mathlib (at the commit this project pins) four different ways and checked every conclusion in Lean. New files: `CISUP_DIAGONAL_CALLERS.md` (the survey, with the exact grep commands and hit lists) and `RequestProject/CiSupDiagonalCallerSurvey.lean` (builds, no `sorry`, only the standard axioms).
+
+**Answer: which callers does the lemma shorten?**
+
+1. **The `Cardinal` add-form `ciSup₂_add_eq_ciSup_diagonal` has no caller in Mathlib.** Searching `SetTheory/Cardinal/`, `LinearAlgebra/Dimension/` and `RingTheory/AlgebraicIndependent/` for `⨆ … + …` returns only the four lines of `Cardinal.ciSup_add`, `add_ciSup`, `ciSup_add_ciSup` themselves. No in-tree proof collapses a double supremum of cardinals onto a diagonal.
+
+2. **The generic parent `ciSup₂_eq_ciSup_diagonal` has three real callers** — the same argument copy-pasted into three files: `ENNReal.iSup_add_iSup` (`Data/ENNReal/Operations.lean:690`), `ENat.iSup_add_iSup` (`Data/ENat/Lattice.lean:223`) and `ENNReal.iInf_add_iInf` (`Data/ENNReal/Operations.lean:564`, via the order-dual). All three are re-proved through the lemma in the Lean file (`BddAbove` discharged by `OrderTop.bddAbove`), and each replacement is `rfl`-checked against the current Mathlib statement. Proof bodies go 6 → 4, 6 → 4, 6 → 3 lines; the real argument is duplicate removal, not line count. Second-order beneficiaries: `ENat.sum_iSup`, `ENNReal.finsetSum_iSup`, `ENNReal.iInf_sum`, and through `iSup_add_iSup_of_monotone` the `MeasureTheory/Integral/Lebesgue` sites. Caveat recorded: `ℝ≥0∞`/`ℕ∞` are complete lattices, so the complete-lattice form serves them too; the conditionally complete form is needed only for `Cardinal`.
+
+3. **The three call sites of `Cardinal.ciSup_add_ciSup` are not shortened by the diagonal lemma.** `rank_quotient_add_rank_le` and `rank_add_rank_le_rank_prod` (`LinearAlgebra/Dimension/Constructions.lean:92,132`) and `lift_trdeg_add_le` (`RingTheory/AlgebraicIndependent/Transcendental.lean:250`) *bound* the double supremum rather than collapsing it, and their two families are indexed by different types, so no diagonal exists. What they do share is a different weakest statement, `Cardinal.ciSup_add_ciSup_le` (additive analogue of `ENNReal.iSup_add_iSup_le`); Mathlib's existing generic `ciSup_add_ciSup_le` assumes `Group α` and so cannot serve `Cardinal`. All three proofs are rewritten through it in the Lean file, each losing a `rw` and one `ciSup_le`, and each `rfl`-checked against the Mathlib statement.
+
+4. Two free by-products, also checked: the multiplicative twin `Cardinal.ciSup₂_mul_eq_ciSup_diagonal` (companion of `Cardinal.ciSup_mul_ciSup`, likewise with no caller), and `Cardinal.ciSup_add_ciSup_diagonal` (`(⨆ f) + (⨆ g) = ⨆ k, f k + g k`), the `Cardinal` analogue of `ENNReal.iSup_add_iSup` — the only shape a future caller would use.
+
+5. Naming point found by grep: `ciSup₂` occurs nowhere in Mathlib — the `₂` API exists only on the complete-lattice side — so the `ciSup₂_…` prefix has no precedent upstream.
+
+Recommendation in the report: post the generic lemma plus the three `ENNReal`/`ENat` duplicate removals as one PR; ship the `Cardinal` specialisation only alongside `ciSup_add_ciSup_diagonal` and state openly that it has no in-tree caller; keep `Cardinal.ciSup_add_ciSup_le` as a separate small PR, since that is the one that actually shortens existing `Cardinal` proofs.
+
+# Summary of changes for run c762ba96-0d2a-4919-ae91-f4ee91d2b9c0
+The Lean formalization is in place and machine-checked, in the new file `RequestProject/CiSupDiagonalPR2.lean` (217 lines). I rebuilt the module explicitly (`RequestProject.CiSupDiagonalPR2` — build successful), scanned it for `sorry`/`admit`/`axiom` (none), and checked axiom dependencies: every theorem in it depends only on `propext`, `Classical.choice`, `Quot.sound`. The work is committed and pushed.
+
+Contents, in four sections:
+
+**§1 As submitted** — `CiSupDiagonal.AsSubmitted.ciSup₂_eq_ciSup_diagonal`: your proof compiled verbatim (only a namespace added), so the starting point is on record and comparable.
+
+**§2 Refactored, upstream form** — `CiSupDiagonal.ciSup₂_eq_ciSup_diagonal`, same statement, shorter proof:
+
+```lean
+theorem ciSup₂_eq_ciSup_diagonal {α : Type*} {ι : Sort*} [ConditionallyCompleteLattice α]
+    (f : ι → ι → α) (hf : BddAbove (range fun k ↦ f k k)) (h : ∀ i j, ∃ k, f i j ≤ f k k) :
+    ⨆ i, ⨆ j, f i j = ⨆ k, f k k := by
+  cases isEmpty_or_nonempty ι
+  · rw [iSup_of_empty', iSup_of_empty']
+  have key : ∀ i j, f i j ≤ ⨆ k, f k k := fun i j ↦
+    let ⟨k, hk⟩ := h i j; hk.trans (le_ciSup hf k)
+  have hrow : ∀ i, BddAbove (range (f i)) := fun i ↦ ⟨_, forall_mem_range.2 (key i)⟩
+  have hcol : BddAbove (range fun i ↦ ⨆ j, f i j) :=
+    ⟨_, forall_mem_range.2 fun i ↦ ciSup_le (key i)⟩
+  exact le_antisymm (ciSup_le fun i ↦ ciSup_le (key i))
+    (ciSup_le fun k ↦ (le_ciSup (hrow k) k).trans (le_ciSup hcol k))
+```
+
+The refactor replaces the arbitrary upper bound `b` obtained from `hf` by the right-hand side `⨆ k, f k k` itself, which is already an upper bound and is the least one. That merges `hfb`, one `Exists.elim` and the re-packaged `⟨b, hb⟩` into the single reusable fact `key`, from which both `BddAbove` side conditions and the `≤` half of the antisymmetry follow directly; the two-bullet `refine` becomes one `exact`. Statement, hypotheses and argument order are unchanged; no `[Nonempty ι]` is required. The file records the intended placement (`Mathlib/Order/ConditionallyCompleteLattice/Indexed.lean`, next to `ciSup_le`/`le_ciSup`).
+
+**§3 Tests**, all compiled: the refactored and submitted statements are shown to be interchangeable (each is `exact`-ed against the other, and the two theorem types are `rfl`-equal); empty `Type` and empty `Prop` index types (justifying the absence of `Nonempty`); a monotone family meeting cofinality via `k = max i j`; a constant family; a fully concrete `ℝ` instance; and the intended caller `Cardinal.ciSup_add_ciSup_diagonal`, proved through the lemma.
+
+**§4 Annotated version** — `CiSupDiagonal.Annotated.ciSup₂_eq_ciSup_diagonal`: the identical script with the goal state written out as `⊢ …` after every step: the initial goal, the two branches from `cases isEmpty_or_nonempty ι`, the reduction to `sSup ∅ = sSup ∅` in the empty case, what each `have` adds to the context, and how `le_antisymm` splits the equality, with each `ciSup_le` / `le_ciSup` step shown as a goal transformation.
+
+# Summary of changes for run efc7d8ed-3e3c-4b9f-9ecd-f854ebe86e00
+The formalization is done in Lean and builds cleanly: `RequestProject/PR2.lean` (new file, compiles with no `sorry`, no extra axioms — every declaration depends only on `propext`, `Classical.choice`, `Quot.sound`, and two need no axioms at all).
+
+The file is the "what goes into PR 2" plan written as machine-checked Lean, one section per item, each stating the target Mathlib file and the reason the item belongs to PR 2 rather than PR 1 (which held the diagonal lemma and its three callers).
+
+- **§1 the lemma.** `ciSup₂_eq_ciSup_diagonal` for `ConditionallyCompleteLattice`, argument order `(f) (hf) (h)`, with **no** `Nonempty ι`, for `Mathlib/Order/ConditionallyCompleteLattice/Indexed.lean`. Only the diagonal is assumed bounded above; cofinality then bounds the whole square family. An `example` at an empty index type checks that dropping `Nonempty` is sound (both sides are `sSup ∅`). A clearly marked `private` shim stands in for the general-lattice monotonicity lemma, which the pinned Mathlib here has only in its `…Bot` form (`ciSup_mono'`); the shim is explicitly not part of the proposed patch.
+- **§2 the one caller.** `Cardinal.ciSup_add_ciSup_diagonal`, to sit after `Cardinal.ciSup_add_ciSup`, proved through §1. Two supporting checks: `cardinal_not_bddAbove_univ` (there is no greatest cardinal, so `Cardinal` cannot carry a complete-lattice structure for its order — the formal version of why PR 1's lemma cannot serve this caller), and an `example` showing the cofinality hypothesis is met by monotone families via `k = max i j`.
+- **§3 optional companion.** `IsCofinalFor.bddAbove`, with the `@[to_dual]` partner named `IsCoinitialFor.bddBelow` (verified to be generated with the correct dual statement), plus `bddAbove_row_of_bddAbove_diagonal` and an `example` re-proving §1 through it — so the claim "it discharges the inner boundedness condition" is checked, not asserted. The file also records, with proof structure, that the *outer* bound `BddAbove (range fun i ↦ ⨆ j, f i j)` is not an instance of it, so this companion is a convenience rather than a prerequisite.
+- **§4 not in the code.** The `ConditionallyCompleteLinearOrderBot` variant belongs in the PR text only: once `Nonempty` is dropped it is the same statement, and a closing `example` verifies that the specialisation is discharged by §1 itself. Also listed with reasons: PR 1 material, the `IsCofinalFor` equality lemmas (PR 3), and a hand-written `iInf₂` dual (no caller; `to_dual` does not apply on the conditionally complete side).
+
+`ARISTOTLE_SUMMARY.md` was left untouched; the three user-facing PR 2 declarations are registered, and all work is committed and pushed.
+
+# Summary of changes for run f83d7fa0-9d53-4891-92c0-06a5c6cdd822
+Added `RequestProject/PRContents.lean`, a single Lean file that states what goes into each pull request, following the latest results (the golfed proofs, the modular-draft review, and the naming/argument-order decisions recorded in `PR_SPLIT.md` §5).
+
+Structure — one namespace per PR, each self-contained (no namespace uses another's declarations, matching the requirement that each PR be green on its own):
+
+- `PRPlan.PR1` — the diagonal collapse `iSup₂_eq_iSup_diagonal` over `CompleteSemilatticeSup` with the dual generated by `@[to_dual]`, followed by its three caller rewrites (`ENat.iSup_add_iSup`, `ENNReal.iSup_add_iSup`, `ENNReal.iInf_add_iInf`). Each caller is followed by an `example : @caller_… = @Mathlib_name := rfl`, so the file machine-checks that the replacement proofs prove the current statements unchanged. A nested `PR1.Modular` namespace holds the optional modular form (mutual-cofinality lemma → cofinal-family collapse → diagonal as a one-liner) with a note that shipping it moves the indexed mutual-cofinality lemma from PR 3 into PR 1, and that only one of the two forms should be submitted.
+- `PRPlan.PR2` — the conditionally complete `ciSup₂_eq_ciSup_diagonal` in the recommended `(f) (hf) (h)` argument order and with no `Nonempty ι`, plus the `Cardinal.ciSup_add_ciSup_diagonal` caller; and `IsCofinalFor.bddAbove` with a checked example showing it discharges the inner boundedness side condition (the reason part (a) belongs here rather than in PR 1).
+- `PRPlan.PR3` — the set-level `IsCofinalFor`/`IsCoinitialFor` equality pair, the indexed pair derived from it on ranges, and the two subsequence caller rewrites, again with `rfl` checks against `iSup_eq_iSup_subseq_of_monotone` / `…_antitone`.
+- `PRPlan.NotPosted` — the deliberately excluded items (the `…Bot` variant, re-deriving the diagonal lemma via mutual cofinality, multiplicative analogues, the cofinal-subset chain, the `Monotone.iSup_comp_eq` refactor, style variants and new abstractions), each with the exclusion rule and where it is checked in the project. These are kept as commented code, not live declarations.
+- A closing section giving the posting order.
+
+Docstrings carry the per-PR title, the files touched, the reason for the split, and the scope notes to state in each PR body (the `CompleteSemilatticeSup` choice, and why the proof must stay on the `sSup_le`/`le_sSup` API for `@[to_dual]`).
+
+Verification: the full project builds with the new module, the file contains no `sorry`/`admit`/`axiom`, and the main declarations were checked to depend only on the standard axioms. `ARISTOTLE_SUMMARY.md` was not modified. The work is committed and pushed.
+
+# Summary of changes for run a4a7aeb0-029b-4aca-9465-f42ee47ad144
+Two things were delivered this session.
+
+**1. Visual explanation of the lemmas (`proof-visualisations.tex` / `proof-visualisations.pdf`, 6 pages, all TikZ / tikz-cd, compiles cleanly).**
+- §1–3 — the diagonal collapse `iSup₂_eq_diagonal` drawn three ways: as a combinatorial grid over `ι × ι` with the cofinality arrows pointing at diagonal cells, as a Hasse diagram in `α` showing that the diagonal elements already determine the join, and as a proof-step graph labelling which tactic (`le_antisymm`, `sSup_le`, `le_sSup`) sits on which branch and where the hypothesis is actually used.
+- §4–6 — mutual cofinality as a bipartite graph with the two hypothesis directions in different colours; a reuse graph showing which existing proof each lemma removes (with before/after line-count bars); and a Hasse diagram of the order typeclasses showing where each version lives and why the `…LinearOrderBot` variant collapses.
+- §7 — category-theoretic diagrams: suprema as colimits over the discrete index category, the diagonal functor `Δ : ι → ι × ι` and cofinality as finality (`colim F ≅ colim FΔ`), mutual cofinality as a pair of lax triangles with natural transformations, the Galois adjunction `sup ⊣ ↓(·)` behind `sSup_le`/`le_sSup`, and the `(-)ᵒᵖ` square that `@[to_dual]` realises.
+- §8–9 — the callers as a factorisation diagram (domain rewrite, then one shared order-theoretic arrow), and the subsequence/`atTop` picture.
+- §10–11 — the stabilizer criterion as a group-action picture plus a pullback square and an instantiation tree, the inverse-closure two-element picture, and the decidability bridge as a chain of instances with the `@[to_additive]` rows and a multiplication-table picture for centrality.
+- §12–13 — the PR split drawn as a partition of the reuse graph, and the modularised form (arbitrary cofinal family generalising the diagonal, the three parts of the draft, and the hand-written-duals vs generated-duals comparison).
+
+**2. Review of the modularised PR 1 draft you sent (`PR1_MODULAR_REVIEW.md`, backed by `RequestProject/PR1Modular.lean`; the whole project builds with no `sorry`/`admit`).** Verdict: worth adding. Machine-checked findings:
+- The draft compiles unchanged, and the three `rfl` checks pass, so the replacement proofs prove the current `ENNReal.iSup_add_iSup`, `ENNReal.iInf_add_iInf`, `ENat.iSup_add_iSup` statements. None of the six new order/bounds lemmas exists in the pinned Mathlib.
+- The multiplicative statements compile — refuting the earlier note that they would need extra side conditions — and `[Nonempty ι]` can be dropped from both (checked for `ℝ≥0∞` and `ℕ∞`).
+- Suggested amendment: state part (b) over `CompleteSemilatticeSup` using the `sSup`/`le_sSup` API and let `@[to_dual]` generate the duals; this is strictly more general and turns six declarations into three. The `CompleteLattice` assumption in the draft is forced only by `iSup_mono'`/`iSup₂_le`/`le_iSup₂`/`iSup_le`, which all carry it. Both variants are kept side by side in the Lean file (`AsProposed`, `Refined`).
+- Scope note: part (a) has no caller inside PR 1; `IsCofinalFor.bddAbove` does discharge the inner `BddAbove (range (f i))` side condition of the conditionally complete lemma (checked), but not the outer one — so part (a) fits PR 2 better, or should be made load-bearing.
+
+All work is committed and pushed.
+
+# Summary of changes for run 749a2695-bb93-4de8-98d2-3fcb46a67c3c
+Added `PR_SPLIT.md`, a packaging plan saying exactly what to post in the same PR and what to split into separate PRs, using the golfed versions produced earlier.
+
+Contents:
+- **The splitting rule** used throughout: same PR = the lemma + its `@[to_dual]` partner + the caller rewrites it enables + golfs inside hunks already touched; different PR = anything independently justifiable (other file/typeclass API, extra hypotheses, unrelated golf churn, no caller yet). Explicit consequence: the golfing is *not* its own PR.
+- **PR 1** — the golfed `iSup₂_eq_diagonal` (9 lines, `CompleteSemilatticeSup`, `sSup`/`le_sSup` API so `@[to_dual]` succeeds) together with its three duplicate callers (`ENat.iSup_add_iSup`, `ENNReal.iSup_add_iSup`, `ENNReal.iInf_add_iInf`) and the `simp only … → simp` nit in those same hunks.
+- **PR 2** — the golfed single `ciSup₂_eq_ciSup_diagonal` (10 lines, replacing the two ~26-line copies, no `Nonempty ι`) plus the `Cardinal` caller; with the note that the `…Bot` variant should be reported in prose as redundant rather than shipped as code, and guidance for the case where a reviewer wants PR 1 and PR 2 merged.
+- **PR 3** — the mutual-cofinality set-level and indexed pairs plus the two subsequence refactors, and why the diagonal lemma should not be rederived through them (`Sort*` → `Type*` generality loss).
+- **A "do not post (yet)" table** covering the primed variant, the cofinal-subset chain, the `Monotone.iSup_comp_eq` rewrite, the ~20 style variants, multiplicative versions, and any new typeclass/abstraction.
+- **Two naming nits to settle first** (`iSup₂_eq_diagonal` vs `iSup₂_eq_iSup_diagonal`; the `(f) (hf) (h)` vs `(f) (h) (hb)` argument order), with a recommendation for each, and a posting order.
+
+The Lean code quoted in the file is the machine-checked form from the project's existing files; I additionally re-checked the PR 2 proof in the recommended argument order. The full project still builds with no `sorry`/`admit`. `ARISTOTLE_SUMMARY.md` was left untouched; the new file is committed and pushed.
+
+# Summary of changes for run 907a78c3-7fae-47c1-aaad-d652ab43d0b9
+Golfed the diagonal-supremum proofs and removed the duplication in the `ciSup` lemmas. Everything below is machine-checked in the project (full build, no `sorry`/`admit`, only standard axioms).
+
+Main finding — the two conditionally complete lemmas are one lemma:
+- `ciSup₂_eq_ciSup_diagonal` (`ConditionallyCompleteLattice` + `Nonempty ι`) and `ciSup₂_eq_ciSup_diagonal'` (`ConditionallyCompleteLinearOrderBot`) had copy-paste proofs differing only by the primed/unprimed API (`ciSup_le` vs `ciSup_le'`, etc.).
+- `Nonempty ι` is unnecessary in the general version: for empty `ι` both sides are `sSup ∅`, closed by `cases isEmpty_or_nonempty ι` / `rw [iSup_of_empty', iSup_of_empty']`. With it dropped, the `…Bot` variant is literally the same statement (that order class is a conditionally complete lattice), so it can be deleted; the `Cardinal` caller now uses the general lemma directly.
+- Inside the surviving proof, the two `BddAbove` side conditions both follow from one fact `∀ i j, f i j ≤ b` (proved once), and the first half of the antisymmetry is the neighbouring Mathlib lemma `ciSup_mono_of_forall_exists` applied row-wise, so it is reused rather than re-proved.
+- Net: 2 lemmas of ~26 lines each → 1 lemma of 10 lines.
+
+Also golfed the complete-lattice lemma `iSup₂_eq_diagonal` (16 → 9 lines) by opening both antisymmetry branches at once and dropping one redundant `(s := …)` ascription. Two checked cautions are recorded: the proof must stay on the `sSup_le`/`le_sSup` API (the shorter `iSup_le`/`le_iSup` form fails `@[to_dual]` with a `SupSet`/`InfSet` projection mismatch), and `CompleteSemilatticeSup` suffices. The `ENat`/`ENNReal` caller hunks were already minimal; their empty branch can just be `simp`.
+
+Files:
+- `GOLF.md` — before/after explanation, the reuse/deduplication argument, and the caveats.
+- `GOLF.patch` — ready-to-apply golfed upstream diff (single conditionally complete lemma, golfed complete-lattice lemma, `Cardinal` caller).
+- `RequestProject/NextPR.lean`, `RequestProject/Diagonal.lean`, `Main.lean` — golfed, checked versions (the `…Bot` variant is kept as a one-line corollary to record its redundancy); `RequestProject/DiagonalVariations.lean` got a note pointing at the same fact.
+
+All changes are committed and pushed.
+
+# Summary of changes for run 56e60ab9-9e9d-4721-bbc3-cc9ada7b9af0
+Possible commit messages:
+- `feat(order): add diagonal cofinality lemma for indexed suprema`
+- `refactor: deduplicate ENat and ENNReal iSup proofs`
+- Single commit: `Order: add diagonal cofinality lemma for indexed suprema`
+
+Possible PR titles:
+- `Order: add diagonal cofinality lemma for indexed suprema`
+- `Order: deduplicate diagonal indexed-supremum proofs`
+
+Suggested PR message:
+
+> Add `iSup₂_eq_iSup_diagonal`, identifying a doubly indexed supremum with its diagonal when the diagonal is cofinal. The theorem uses the weak `CompleteSemilatticeSup` assumption and generates the order-dual infimum result via `@[to_dual]`.
+>
+> Use the new lemma to simplify the duplicated proofs of `ENat.iSup_add_iSup` and `ENNReal.iSup_add_iSup`.
+>
+> This introduces no new framework; it extracts a recurring order-theoretic argument into a small, reusable lemma.
+
 # Summary of changes for run d0d65e98-3fe3-49ce-b75c-3e9b08c2d61b
 Added `RequestProject/NextPR.lean` as a focused, ready-to-adapt Lean proposal containing:
 

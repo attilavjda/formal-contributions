@@ -1,0 +1,223 @@
+\section{Arrow diagrams}
+
+A complete lattice is a category with all (co)limits: objects are elements, there is one
+arrow $a \to b$ exactly when $a \le b$, $\Sup$ is the colimit and $\Inf$ the limit.  Under
+that dictionary each lemma of the development becomes a diagram, and each bridge of
+\lean{RequestProject/Bridges.lean} becomes a functor.
+
+\subsection{The proofs as commuting triangles}
+
+Both collapse lemmas are a \lean{trans} of two equalities, i.e.\ a commuting triangle
+whose slanted edge is the theorem.
+
+\begin{figure}[ht]
+\centering
+\begin{minipage}{.48\textwidth}\centering
+\begin{cdscale}{\textwidth}
+\begin{tikzcd}[column sep=2.6cm,row sep=1.7cm]
+\displaystyle\Sup_i \Sup_j F_{ij}
+  \arrow[r,"\lab{iSup\_pprod}"]
+  \arrow[dr,swap,pos=.42,"\lab{iSup₂\_eq\_iSup\_diagonal}"]
+& \displaystyle\Sup_{p:\iota\times\iota} F_{p_1p_2}
+  \arrow[d,"\lab{iSup\_eq\_iSup\_of\_cofinal}"] \\
+& \displaystyle\Sup_k F_{kk}
+\end{tikzcd}
+\end{cdscale}
+\\[4pt]{\footnotesize complete lattice: no side conditions}
+\end{minipage}\hfill
+\begin{minipage}{.48\textwidth}\centering
+\begin{cdscale}{\textwidth}
+\begin{tikzcd}[column sep=2.6cm,row sep=1.7cm]
+\displaystyle\Sup_i \Sup_j F_{ij}
+  \arrow[r,"\lab{ciSup\_pprod}"]
+  \arrow[dr,swap,pos=.42,"\lab{ciSup₂\_eq\_ciSup\_diagonal}"]
+& \displaystyle\Sup_{p:\iota\times\iota} F_{p_1p_2}
+  \arrow[d,"\lab{ciSup\_eq\_ciSup\_of\_cofinal}"] \\
+& \displaystyle\Sup_k F_{kk}
+\end{tikzcd}
+\end{cdscale}
+\\[4pt]{\footnotesize conditionally complete: the horizontal arrow, and only it, consumes
+\lean{bddAbove\_range\_uncurry}}
+\end{minipage}
+\caption{The same triangle twice.  Passing from the complete to the conditionally
+complete world changes one edge label, not the shape.}
+\end{figure}
+
+\subsection{The binary-operation form as a zig-zag}
+
+\lean{Golf.iSup\_op\_iSup\_diagonal} takes the two distributivity laws of the ambient
+theory as parameters and produces the diagonal form; the proof is a three-step chain.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzcd}[column sep=2.4cm,row sep=1.4cm]
+\mathrm{op}\bigl(\Sup_i f_i\bigr)\bigl(\Sup_j g_j\bigr)
+  \arrow[r,"h_\ell"]
+& \displaystyle\Sup_i \mathrm{op}\,(f_i)\bigl(\Sup_j g_j\bigr)
+  \arrow[d,"\Sup_i h_r"] \\
+\displaystyle\Sup_k \mathrm{op}\,(f_k)(g_k)
+& \displaystyle\Sup_i\Sup_j \mathrm{op}\,(f_i)(g_j)
+  \arrow[l,swap,"\lab{iSup₂\_eq\_iSup\_diagonal}"]
+\end{tikzcd}
+\caption{Instantiating $\mathrm{op}$ with \lean{(·+·)} and the pair
+\lean{ENNReal.iSup\_add}/\lean{ENNReal.add\_iSup} gives \lean{ennreal\_iSup\_add\_iSup};
+with \lean{(·*·)} and \lean{ENNReal.iSup\_mul}/\lean{ENNReal.mul\_iSup} the multiplicative
+analogue --- same proof, new inputs.}
+\end{figure}
+
+\subsection{Currying and Fubini for colimits}
+
+\lean{Golf.iSup\_pprod} is the lattice shadow of the Fubini theorem for colimits: the
+colimit over a product category is the iterated colimit.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzcd}[column sep=1.8cm,row sep=1.3cm]
+\iota\times\iota
+  \arrow[r,"F"]
+  \arrow[d,swap,"\mathrm{pr}_1"]
+& \alpha \\
+\iota
+  \arrow[ur,swap,"{\Sup_j F(-,j)}"]
+&
+\end{tikzcd}
+\qquad\qquad
+\begin{tikzcd}[column sep=1.6cm,row sep=1.3cm]
+\iota
+  \arrow[r,"\Delta"]
+  \arrow[dr,swap,"F\circ\Delta"]
+& \iota\times\iota
+  \arrow[d,"F"] \\
+& \alpha
+\end{tikzcd}
+\caption{Left: the left Kan extension along $\mathrm{pr}_1$ is the row-supremum, and its
+colimit is $\Sup_i\Sup_j F_{ij}$.  Right: the diagonal functor
+$\Delta = $ \lean{CategoryTheory.Functor.diag}, whose composite with $F$ is the diagonal
+family.  The theorem says the two colimits agree.}
+\end{figure}
+
+\subsection{The categorical bridge: the collapse \emph{is} finality of $\Delta$}
+
+For a bimonotone family over a directed (= filtered) index, no order-theoretic argument
+is needed at all: $\Delta$ is a final functor, and finality is precisely invariance of
+colimits: this is
+\lean{iSup\_prod\_eq\_iSup\_diagonal\_functor} in \lean{Bridges.lean}.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzcd}[column sep=2.1cm,row sep=1.35cm]
+\iota
+  \arrow[r,"\Delta"]
+  \arrow[dr,swap,"F\Delta"]
+& \iota\times\iota
+  \arrow[d,"F"]
+  \arrow[r,"\mathrm{colim}"]
+& \operatorname{colim} F
+  \arrow[d,equals,"\lab{Functor.Final.colimitIso}"{xshift=2mm}] \\
+& \alpha
+  \arrow[r,swap,"\mathrm{colim}"]
+& \operatorname{colim} (F\Delta)
+\end{tikzcd}
+\qquad
+\raisebox{1.1cm}{$\begin{aligned}
+\operatorname{colim} F &= \Sup_{p}F_p &&\lab{colimit\_eq\_iSup}\\
+\operatorname{colim} F\Delta &= \Sup_k F_{kk} &&\lab{colimit\_eq\_iSup}\\
+\Delta \text{ final} &\ \Leftarrow\ \iota \text{ filtered}
+  &&\lab{final\_diag\_of\_isFiltered}
+\end{aligned}$}
+\caption{The categorical route.  Directedness of $\iota$ enters as filteredness of the
+index category; cofinality of the diagonal \emph{set} becomes finality of the diagonal
+\emph{functor}.}
+\end{figure}
+
+\subsection{Transport along the bridges}
+
+Each bridge of \lean{Bridges.lean} is a map of contexts.  What differs between them is
+how much of the statement crosses: an order isomorphism carries hypothesis
+\emph{and} conclusion, a sup-homomorphism only the conclusion, and duality carries
+everything for free because it is the identity on propositions.
+
+\begin{figure}[ht]
+\centering
+\begin{minipage}{.32\textwidth}\centering
+\begin{tikzcd}[column sep=1.1cm,row sep=.95cm]
+\alpha \arrow[r,"e","\sim"'] \arrow[d,swap,"\Sup"] & \beta \arrow[d,"\Sup"] \\
+\alpha \arrow[r,swap,"e"] & \beta
+\end{tikzcd}\\[3pt]
+{\footnotesize\lean{OrderIso}: \\ \lean{e.map\_iSup}, both ways}
+\end{minipage}\hfill
+\begin{minipage}{.32\textwidth}\centering
+\begin{tikzcd}[column sep=1.1cm,row sep=.95cm]
+\alpha \arrow[r,"e"] \arrow[d,swap,"\Sup"] & \beta \arrow[d,"\Sup"] \\
+\alpha \arrow[r,swap,"e"] & \beta
+\end{tikzcd}\\[3pt]
+{\footnotesize\lean{sSupHom}: \emph{not} injective; \\ only the conclusion crosses}
+\end{minipage}\hfill
+\begin{minipage}{.32\textwidth}\centering
+\begin{tikzcd}[column sep=1.25cm,row sep=.95cm]
+\alpha
+  \arrow[r,bend left=25,"l"]
+  \arrow[r,phantom,"\scriptstyle\bot"]
+  \arrow[d,swap,"\Sup"]
+& \beta
+  \arrow[l,bend left=25,"u"]
+  \arrow[d,"\Sup"] \\
+\alpha \arrow[r,swap,"l"] & \beta
+\end{tikzcd}\\[3pt]
+{\footnotesize\lean{GaloisConnection}: the left \\ adjoint preserves $\Sup$}
+\end{minipage}
+\caption{Three functorial bridges of increasing weakness.  In all three the square
+commutes, which is all the proof of the transported collapse uses
+(\lean{simp only [← map\_iSup, iSup₂\_eq\_iSup\_diagonal]}).}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\begin{tikzcd}[column sep=2.4cm,row sep=1.2cm]
+\alpha
+  \arrow[r,"{(-)^{\mathrm{od}}}","\sim"']
+  \arrow[d,swap,"{\Sup_i\Sup_j F_{ij} = \Sup_k F_{kk}}"]
+& \alpha^{\mathrm{od}}
+  \arrow[d,"{\Inf_i\Inf_j F_{ij} = \Inf_k F_{kk}}"] \\
+\mathrm{Prop}
+  \arrow[r,equals,"\lab{Iff.rfl}"]
+& \mathrm{Prop}
+\end{tikzcd}
+\caption{The duality bridge (\lean{Golf.Bridge.iSup₂\_diagonal\_iff\_dual}).  The
+$\Inf$-statement in $\alpha^{\mathrm{od}}$ and the $\Sup$-statement in $\alpha$ are not
+merely equivalent: they are the \emph{same} proposition, which is why every dual lemma
+in \lean{Diagonal.lean} is proved by its primal with the single annotation
+\lean{(α := αᵒᵈ)}.}
+\end{figure}
+
+\subsection{The bridge hub}
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm,font=\footnotesize]
+  \node[rounded corners=4pt,draw=diagcol,fill=diagcol!8,line width=1pt,
+        align=center,inner sep=6pt] (T) at (0,0)
+    {\textbf{diagonal collapse}\\[2pt]$\Sup_i\Sup_j F_{ij} = \Sup_k F_{kk}$};
+  \tikzset{ctx/.style={rounded corners=3pt,draw=black!45,fill=white,align=center,
+    inner sep=3.5pt,font=\scriptsize}}
+  \node[ctx] (dual)  at (-5.2, 2.6) {$\alpha^{\mathrm{od}}$\\ duality};
+  \node[ctx] (sets)  at (-5.6, 0.0) {$\mathrm{Set}\,\alpha$\\ \lean{IsCofinalFor}};
+  \node[ctx] (lin)   at (-5.2,-2.6) {cond.\ complete\\ \emph{linear} order};
+  \node[ctx] (iso)   at ( 0.0, 3.0) {$e : \alpha \simeq_o \beta$\\ order iso};
+  \node[ctx] (hom)   at ( 5.3, 2.6) {$e : \mathrm{sSupHom}$\\ non-faithful};
+  \node[ctx] (gal)   at ( 5.7, 0.0) {$l \dashv u$\\ Galois};
+  \node[ctx] (cat)   at ( 5.2,-2.6) {$\mathrm{colim}$, $\Delta$ final\\ category theory};
+  \node[ctx] (app)   at ( 0.0,-3.0)
+    {$\enn$, $\mathbb{N}_\infty$, $\mathrm{Cardinal}$\\ applications};
+  \foreach \n/\lab in {dual/{\lean{Iff.rfl}},sets/{\lean{sSup∘range}},
+      lin/{no \lean{BddAbove}},iso/{hyp.\ \& concl.},hom/{concl.\ only},
+      gal/{\lean{gc.l\_iSup}},cat/{finality},app/{instances}}{
+    \draw[-{Stealth[length=2mm]},draw=bridgecol!80,line width=.7pt]
+      (T) -- node[sloped,above,font=\tiny,text=bridgecol]{\lab} (\n);}
+\end{tikzpicture}
+\caption{One theorem, eight contexts.  The label on each arrow records how much of the
+statement survives the transport --- the whole point of the bridge methodology is that
+the cheapest context is not always the one the statement was posed in.}
+\end{figure}
+
+\clearpage
