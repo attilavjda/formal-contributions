@@ -1,0 +1,12 @@
+Mathlib/NumberTheory/ArithmeticFunction/Moebius.lean:245: prod_eq_iff_prod_pow_moebius_eq is a hand-written twin of sum_eq_iff_sum_smul_moebius_eq (via Additive) -- try `@[to_additive]` on sum_eq_iff_sum_smul_moebius_eq
+Mathlib/NumberTheory/ArithmeticFunction/Moebius.lean:327: prod_eq_iff_prod_pow_moebius_eq_on is a hand-written twin of sum_eq_iff_sum_smul_moebius_eq_on (via Additive) -- try `@[to_additive]` on sum_eq_iff_sum_smul_moebius_eq_on
+Mathlib/Algebra/BigOperators/Intervals.lean:151: sum_Ico_reflect is a hand-written twin of prod_Ico_reflect (via Multiplicative) -- try `@[to_additive]` on prod_Ico_reflect
+Mathlib/Algebra/BigOperators/Intervals.lean:163: sum_range_reflect is a hand-written twin of prod_range_reflect (via Multiplicative) -- try `@[to_additive]` on prod_range_reflect
+Mathlib/Algebra/BigOperators/NatAntidiagonal.lean:30: sum_antidiagonal_succ is a hand-written twin of prod_antidiagonal_succ (via Multiplicative) -- try `@[to_additive]` on prod_antidiagonal_succ
+Mathlib/Algebra/BigOperators/NatAntidiagonal.lean:45: sum_antidiagonal_succ' is a hand-written twin of prod_antidiagonal_succ' (via Multiplicative) -- try `@[to_additive]` on prod_antidiagonal_succ'
+Mathlib/GroupTheory/OrderOfElement.lean:712: vadd_eq_self_of_mem_zmultiples is a hand-written twin of smul_eq_self_of_mem_zpowers (via Multiplicative) -- try `@[to_additive]` on smul_eq_self_of_mem_zpowers
+Mathlib/Analysis/Complex/Exponential.lean:138: exp_multiset_sum is a hand-written twin of MonoidHom.map_multiset_prod (via Multiplicative) -- try `@[to_additive]` on MonoidHom.map_multiset_prod
+Mathlib/Analysis/Complex/Exponential.lean:145: exp_nsmul is a hand-written twin of MonoidHom.map_pow (via Multiplicative) -- try `@[to_additive]` on MonoidHom.map_pow
+Mathlib/Analysis/Complex/Exponential.lean:219: exp_multiset_sum is a hand-written twin of MonoidHom.map_multiset_prod (via Multiplicative) -- try `@[to_additive]` on MonoidHom.map_multiset_prod
+Mathlib/Analysis/Complex/Exponential.lean:226: exp_nsmul is a hand-written twin of MonoidHom.map_pow (via Multiplicative) -- try `@[to_additive]` on MonoidHom.map_pow
+-- 11 candidate(s)

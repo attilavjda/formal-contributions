@@ -1,0 +1,186 @@
+--- a/Mathlib/Algebra/BigOperators/Expect.lean
++++ b/Mathlib/Algebra/BigOperators/Expect.lean
+@@ -272,11 +272,9 @@
+ 
+ end bij
+ 
+-@[simp] lemma expect_inv_index [DecidableEq ι] [InvolutiveInv ι] (s : Finset ι) (f : ι → M) :
++@[to_additive, simp]
++lemma expect_inv_index [DecidableEq ι] [InvolutiveInv ι] (s : Finset ι) (f : ι → M) :
+     𝔼 i ∈ s⁻¹, f i = 𝔼 i ∈ s, f i⁻¹ := expect_image inv_injective.injOn
+-
+-@[simp] lemma expect_neg_index [DecidableEq ι] [InvolutiveNeg ι] (s : Finset ι) (f : ι → M) :
+-    𝔼 i ∈ -s, f i = 𝔼 i ∈ s, f (-i) := expect_image neg_injective.injOn
+ 
+ lemma _root_.map_expect {F : Type*} [FunLike F M N] [LinearMapClass F ℚ≥0 M N]
+     (g : F) (f : ι → M) (s : Finset ι) :
+--- a/Mathlib/Algebra/BigOperators/Intervals.lean
++++ b/Mathlib/Algebra/BigOperators/Intervals.lean
+@@ -132,6 +132,7 @@
+   · replace h := h.le
+     rw [Ico_eq_empty_of_le h, tsub_eq_zero_iff_le.mpr h, range_zero, prod_empty, prod_empty]
+ 
++@[to_additive]
+ theorem prod_Ico_reflect (f : ℕ → M) (k : ℕ) {m n : ℕ} (h : m ≤ n + 1) :
+     (∏ j ∈ Ico k m, f (n - j)) = ∏ j ∈ Ico (n + 1 - m) (n + 1 - k), f j := by
+   have : ∀ i < m, i ≤ n := by
+@@ -148,10 +149,7 @@
+       exact hkm
+     simp only [hkm, Ico_eq_empty_of_le, prod_empty, Ico_eq_empty_of_le this]
+ 
+-theorem sum_Ico_reflect {δ : Type*} [AddCommMonoid δ] (f : ℕ → δ) (k : ℕ) {m n : ℕ}
+-    (h : m ≤ n + 1) : (∑ j ∈ Ico k m, f (n - j)) = ∑ j ∈ Ico (n + 1 - m) (n + 1 - k), f j :=
+-  @prod_Ico_reflect (Multiplicative δ) _ f k m n h
+-
++@[to_additive]
+ theorem prod_range_reflect (f : ℕ → M) (n : ℕ) :
+     (∏ j ∈ range n, f (n - 1 - j)) = ∏ j ∈ range n, f j := by
+   cases n
+@@ -159,10 +157,6 @@
+   · simp only [← Nat.Ico_zero_eq_range, Nat.succ_sub_succ_eq_sub, tsub_zero]
+     rw [prod_Ico_reflect _ _ le_rfl]
+     simp
+-
+-theorem sum_range_reflect {δ : Type*} [AddCommMonoid δ] (f : ℕ → δ) (n : ℕ) :
+-    (∑ j ∈ range n, f (n - 1 - j)) = ∑ j ∈ range n, f j :=
+-  @prod_range_reflect (Multiplicative δ) _ f n
+ 
+ @[simp]
+ theorem prod_Ico_id_eq_factorial : ∀ n : ℕ, (∏ x ∈ Ico 1 (n + 1), x) = n !
+--- a/Mathlib/Algebra/BigOperators/NatAntidiagonal.lean
++++ b/Mathlib/Algebra/BigOperators/NatAntidiagonal.lean
+@@ -22,14 +22,11 @@
+ 
+ namespace Nat
+ 
++@[to_additive]
+ theorem prod_antidiagonal_succ {n : ℕ} {f : ℕ × ℕ → M} :
+     (∏ p ∈ antidiagonal (n + 1), f p)
+       = f (0, n + 1) * ∏ p ∈ antidiagonal n, f (p.1 + 1, p.2) := by
+   rw [antidiagonal_succ, prod_cons, prod_map]; rfl
+-
+-theorem sum_antidiagonal_succ {n : ℕ} {f : ℕ × ℕ → N} :
+-    (∑ p ∈ antidiagonal (n + 1), f p) = f (0, n + 1) + ∑ p ∈ antidiagonal n, f (p.1 + 1, p.2) :=
+-  @prod_antidiagonal_succ (Multiplicative N) _ _ _
+ 
+ @[to_additive]
+ theorem prod_antidiagonal_swap {n : ℕ} {f : ℕ × ℕ → M} :
+@@ -37,14 +34,11 @@
+   conv_lhs => rw [← map_swap_antidiagonal, Finset.prod_map]
+   rfl
+ 
++@[to_additive]
+ theorem prod_antidiagonal_succ' {n : ℕ} {f : ℕ × ℕ → M} : (∏ p ∈ antidiagonal (n + 1), f p) =
+     f (n + 1, 0) * ∏ p ∈ antidiagonal n, f (p.1, p.2 + 1) := by
+   rw [← prod_antidiagonal_swap, prod_antidiagonal_succ, ← prod_antidiagonal_swap]
+   rfl
+-
+-theorem sum_antidiagonal_succ' {n : ℕ} {f : ℕ × ℕ → N} :
+-    (∑ p ∈ antidiagonal (n + 1), f p) = f (n + 1, 0) + ∑ p ∈ antidiagonal n, f (p.1, p.2 + 1) :=
+-  @prod_antidiagonal_succ' (Multiplicative N) _ _ _
+ 
+ @[to_additive]
+ theorem prod_antidiagonal_subst {n : ℕ} {f : ℕ × ℕ → ℕ → M} :
+--- a/Mathlib/Algebra/Group/Action/End.lean
++++ b/Mathlib/Algebra/Group/Action/End.lean
+@@ -198,6 +198,7 @@
+     ⇑(MulAction.toPermHom G α) = MulAction.toPerm :=
+   rfl
+ 
++@[to_additive]
+ lemma MulAction.toPerm_one :
+     (MulAction.toPerm (1 : G)) = (1 : Equiv.Perm α) := by
+   aesop
+@@ -215,10 +216,6 @@
+ lemma AddAction.coe_toPermHom :
+     ⇑(AddAction.toPermHom G α) = AddAction.toPerm :=
+   rfl
+-
+-theorem AddAction.toPerm_zero :
+-    (AddAction.toPerm (0 : G)) = (1 : Equiv.Perm α) := by
+-  aesop
+ 
+ end AddGroup
+ 
+--- a/Mathlib/Algebra/Group/Translate.lean
++++ b/Mathlib/Algebra/Group/Translate.lean
+@@ -75,9 +75,6 @@
+ section AddCommMonoid
+ variable [AddCommMonoid M]
+ 
+-lemma translate_sum_right (a : G) (f : ι → G → M) (s : Finset ι) :
+-    τ a (∑ i ∈ s, f i) = ∑ i ∈ s, τ a (f i) := by ext; simp
+-
+ lemma sum_translate [Fintype G] (a : G) (f : G → M) : ∑ b, τ a f b = ∑ b, f b :=
+   Fintype.sum_equiv (Equiv.subRight _) _ _ fun _ ↦ rfl
+ 
+@@ -93,5 +90,6 @@
+ 
+ variable [CommMonoid M]
+ 
++@[to_additive]
+ lemma translate_prod_right (a : G) (f : ι → G → M) (s : Finset ι) :
+     τ a (∏ i ∈ s, f i) = ∏ i ∈ s, τ a (f i) := by ext; simp
+--- a/Mathlib/RingTheory/FiniteType.lean
++++ b/Mathlib/RingTheory/FiniteType.lean
+@@ -460,17 +460,6 @@
+   rw [adjoin_eq_span] at hm
+   exact mem_closure_of_mem_span_closure hm
+ 
+-/-- If `R[M]` is of finite type then `M` is finitely generated. -/
+-theorem fg_of_finiteType [CommRing R] [Nontrivial R] [h : FiniteType R R[M]] :
+-    AddMonoid.FG M :=
+-  finiteType_iff_fg.1 h
+-
+-/-- An additive group `G` is finitely generated if and only if `R[G]` is of
+-finite type. -/
+-theorem finiteType_iff_group_fg {G : Type*} [AddGroup G] [CommRing R] [Nontrivial R] :
+-    FiniteType R R[G] ↔ AddGroup.FG G := by
+-  simpa [AddGroup.fg_iff_addMonoid_fg] using finiteType_iff_fg
+-
+ end AddMonoidAlgebra
+ 
+ namespace MonoidAlgebra
+@@ -597,11 +586,13 @@
+   mpr _ := inferInstance
+ 
+ /-- If `R[M]` is of finite type then `M` is finitely generated. -/
++@[to_additive]
+ theorem fg_of_finiteType [CommRing R] [Nontrivial R] [h : FiniteType R R[M]] :
+     Monoid.FG M :=
+   finiteType_iff_fg.1 h
+ 
+ /-- A group `G` is finitely generated if and only if `R[G]` is of finite type. -/
++@[to_additive finiteType_iff_group_fg]
+ theorem finiteType_iff_group_fg {G : Type*} [Group G] [CommRing R] [Nontrivial R] :
+     FiniteType R R[G] ↔ Group.FG G := by
+   simpa [Group.fg_iff_monoid_fg] using finiteType_iff_fg
+--- a/Mathlib/Tactic/LinearCombination'.lean
++++ b/Mathlib/Tactic/LinearCombination'.lean
+@@ -45,19 +45,19 @@
+ 
+ variable {α : Type*} {a a' a₁ a₂ b b' b₁ b₂ c : α}
+ 
+-theorem pf_add_c [Add α] (p : a = b) (c : α) : a + c = b + c := p ▸ rfl
+-theorem c_add_pf [Add α] (p : b = c) (a : α) : a + b = a + c := p ▸ rfl
+-theorem add_pf [Add α] (p₁ : (a₁ : α) = b₁) (p₂ : a₂ = b₂) : a₁ + a₂ = b₁ + b₂ := p₁ ▸ p₂ ▸ rfl
+-theorem pf_sub_c [Sub α] (p : a = b) (c : α) : a - c = b - c := p ▸ rfl
+-theorem c_sub_pf [Sub α] (p : b = c) (a : α) : a - b = a - c := p ▸ rfl
+-theorem sub_pf [Sub α] (p₁ : (a₁ : α) = b₁) (p₂ : a₂ = b₂) : a₁ - a₂ = b₁ - b₂ := p₁ ▸ p₂ ▸ rfl
+-theorem neg_pf [Neg α] (p : (a : α) = b) : -a = -b := p ▸ rfl
++@[to_additive]
+ theorem pf_mul_c [Mul α] (p : a = b) (c : α) : a * c = b * c := p ▸ rfl
++@[to_additive]
+ theorem c_mul_pf [Mul α] (p : b = c) (a : α) : a * b = a * c := p ▸ rfl
++@[to_additive]
+ theorem mul_pf [Mul α] (p₁ : (a₁ : α) = b₁) (p₂ : a₂ = b₂) : a₁ * a₂ = b₁ * b₂ := p₁ ▸ p₂ ▸ rfl
++@[to_additive]
+ theorem inv_pf [Inv α] (p : (a : α) = b) : a⁻¹ = b⁻¹ := p ▸ rfl
++@[to_additive]
+ theorem pf_div_c [Div α] (p : a = b) (c : α) : a / c = b / c := p ▸ rfl
++@[to_additive]
+ theorem c_div_pf [Div α] (p : b = c) (a : α) : a / b = a / c := p ▸ rfl
++@[to_additive]
+ theorem div_pf [Div α] (p₁ : (a₁ : α) = b₁) (p₂ : a₂ = b₂) : a₁ / a₂ = b₁ / b₂ := p₁ ▸ p₂ ▸ rfl
+ 
+ /-- Result of `expandLinearCombo`, either an equality proof or a value. -/

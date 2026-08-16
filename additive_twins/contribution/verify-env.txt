@@ -1,0 +1,702 @@
+skipped Init.MethodSpecsSimp: no source file under .lake/packages/mathlib, .lake/packages/batteries
+skipped Init.MethodSpecsSimp: no source file under .lake/packages/mathlib, .lake/packages/batteries
+skipped Mathlib.Algebra.BigOperators.Fin: List.alternatingSum.eq_def or List.alternatingProd.eq_def is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/BigOperators/Fin.lean
+skipped Mathlib.Algebra.BigOperators.Pi: AddMonoidHom.functions_ext'_iff or MonoidHom.functions_ext'_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/BigOperators/Pi.lean
+skipped Mathlib.Algebra.Category.Grp.Basic: AddCommGrpCat.mk.sizeOf_spec or CommGrpCat.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Grp/Basic.lean
+skipped Mathlib.Algebra.Category.Grp.Basic: AddGrpCat.mk.inj or GrpCat.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Grp/Basic.lean
+skipped Mathlib.Algebra.Category.Grp.Basic: AddCommGrpCat.mk.injEq or CommGrpCat.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Grp/Basic.lean
+skipped Mathlib.Algebra.Category.Grp.Basic: AddCommGrpCat.hom_ext_iff or CommGrpCat.hom_ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Grp/Basic.lean
+skipped Mathlib.Algebra.Category.Grp.Basic: AddGrpCat.hom_ext_iff or GrpCat.hom_ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Grp/Basic.lean
+skipped Mathlib.Algebra.Category.Grp.Basic: AddGrpCat.mk.sizeOf_spec or GrpCat.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Grp/Basic.lean
+skipped Mathlib.Algebra.Category.Grp.Basic: AddCommGrpCat.ext_iff or CommGrpCat.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Grp/Basic.lean
+skipped Mathlib.Algebra.Category.Grp.Basic: AddGrpCat.Hom.ext_iff or GrpCat.Hom.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Grp/Basic.lean
+skipped Mathlib.Algebra.Category.Grp.Basic: AddCommGrpCat.Hom.ext or CommGrpCat.Hom.ext is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Grp/Basic.lean
+skipped Mathlib.Algebra.Category.Grp.Basic: AddCommGrpCat.mk.inj or CommGrpCat.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Grp/Basic.lean
+skipped Mathlib.Algebra.Category.Grp.Basic: AddGrpCat.ext_iff or GrpCat.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Grp/Basic.lean
+skipped Mathlib.Algebra.Category.Grp.Basic: AddGrpCat.Hom.ext or GrpCat.Hom.ext is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Grp/Basic.lean
+skipped Mathlib.Algebra.Category.Grp.Basic: AddCommGrpCat.Hom.ext_iff or CommGrpCat.Hom.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Grp/Basic.lean
+skipped Mathlib.Algebra.Category.Grp.Basic: AddGrpCat.mk.injEq or GrpCat.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Grp/Basic.lean
+skipped Mathlib.Algebra.Category.Grp.CartesianMonoidal: AddGrpCat.binaryProductLimitCone_cone_pt or GrpCat.binaryProductLimitCone_cone_pt is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Grp/CartesianMonoidal.lean
+skipped Mathlib.Algebra.Category.Grp.EnoughInjectives: AddCommGrpCat.enoughInjectives or CommGrpCat.enoughInjectives is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Grp/EnoughInjectives.lean
+skipped Mathlib.Algebra.Category.Grp.FiniteGrp: FiniteAddGrp.mk.injEq or FiniteGrp.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Grp/FiniteGrp.lean
+skipped Mathlib.Algebra.Category.Grp.FiniteGrp: FiniteAddGrp.mk.sizeOf_spec or FiniteGrp.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Grp/FiniteGrp.lean
+skipped Mathlib.Algebra.Category.Grp.FiniteGrp: FiniteAddGrp.mk.inj or FiniteGrp.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Grp/FiniteGrp.lean
+skipped Mathlib.Algebra.Category.Grp.ForgetCorepresentable: AddGrpCat.forget_isCorepresentable or GrpCat.forget_isCorepresentable is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Grp/ForgetCorepresentable.lean
+skipped Mathlib.Algebra.Category.Grp.ForgetCorepresentable: AddCommGrpCat.forget_isCorepresentable or CommGrpCat.forget_isCorepresentable is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Grp/ForgetCorepresentable.lean
+skipped Mathlib.Algebra.Category.MonCat.Adjunctions: AddCommMonCat.instIsRightAdjointForgetAddMonoidHomCarrier or CommMonCat.instIsRightAdjointForgetMonoidHomCarrier is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/MonCat/Adjunctions.lean
+skipped Mathlib.Algebra.Category.MonCat.Basic: AddMonCat.hom_ext_iff or MonCat.hom_ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/MonCat/Basic.lean
+skipped Mathlib.Algebra.Category.MonCat.Basic: AddCommMonCat.mk.injEq or CommMonCat.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/MonCat/Basic.lean
+skipped Mathlib.Algebra.Category.MonCat.Basic: AddMonCat.Hom.ext_iff or MonCat.Hom.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/MonCat/Basic.lean
+skipped Mathlib.Algebra.Category.MonCat.Basic: AddMonCat.ext_iff or MonCat.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/MonCat/Basic.lean
+skipped Mathlib.Algebra.Category.MonCat.Basic: AddCommMonCat.mk.sizeOf_spec or CommMonCat.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/MonCat/Basic.lean
+skipped Mathlib.Algebra.Category.MonCat.Basic: AddCommMonCat.hom_ext_iff or CommMonCat.hom_ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/MonCat/Basic.lean
+skipped Mathlib.Algebra.Category.MonCat.Basic: AddMonCat.Hom.ext or MonCat.Hom.ext is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/MonCat/Basic.lean
+skipped Mathlib.Algebra.Category.MonCat.Basic: AddCommMonCat.ext_iff or CommMonCat.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/MonCat/Basic.lean
+skipped Mathlib.Algebra.Category.MonCat.Basic: AddCommMonCat.Hom.ext or CommMonCat.Hom.ext is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/MonCat/Basic.lean
+skipped Mathlib.Algebra.Category.MonCat.Basic: AddCommMonCat.Hom.ext_iff or CommMonCat.Hom.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/MonCat/Basic.lean
+skipped Mathlib.Algebra.Category.MonCat.Basic: AddMonCat.mk.inj or MonCat.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/MonCat/Basic.lean
+skipped Mathlib.Algebra.Category.MonCat.Basic: AddMonCat.mk.injEq or MonCat.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/MonCat/Basic.lean
+skipped Mathlib.Algebra.Category.MonCat.Basic: AddCommMonCat.mk.inj or CommMonCat.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/MonCat/Basic.lean
+skipped Mathlib.Algebra.Category.MonCat.Basic: AddMonCat.mk.sizeOf_spec or MonCat.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/MonCat/Basic.lean
+skipped Mathlib.Algebra.Category.MonCat.ForgetCorepresentable: AddCommMonCat.forget_isCorepresentable or CommMonCat.forget_isCorepresentable is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/MonCat/ForgetCorepresentable.lean
+skipped Mathlib.Algebra.Category.MonCat.ForgetCorepresentable: AddMonCat.forget_isCorepresentable or MonCat.forget_isCorepresentable is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/MonCat/ForgetCorepresentable.lean
+skipped Mathlib.Algebra.Category.Semigrp.Basic: AddMagmaCat.mk.inj or MagmaCat.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Semigrp/Basic.lean
+skipped Mathlib.Algebra.Category.Semigrp.Basic: AddSemigrp.hom_ext_iff or Semigrp.hom_ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Semigrp/Basic.lean
+skipped Mathlib.Algebra.Category.Semigrp.Basic: AddMagmaCat.mk.injEq or MagmaCat.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Semigrp/Basic.lean
+skipped Mathlib.Algebra.Category.Semigrp.Basic: AddSemigrp.mk.injEq or Semigrp.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Semigrp/Basic.lean
+skipped Mathlib.Algebra.Category.Semigrp.Basic: AddMagmaCat.Hom.ext_iff or MagmaCat.Hom.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Semigrp/Basic.lean
+skipped Mathlib.Algebra.Category.Semigrp.Basic: AddSemigrp.mk.sizeOf_spec or Semigrp.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Semigrp/Basic.lean
+skipped Mathlib.Algebra.Category.Semigrp.Basic: AddMagmaCat.Hom.ext or MagmaCat.Hom.ext is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Semigrp/Basic.lean
+skipped Mathlib.Algebra.Category.Semigrp.Basic: AddSemigrp.ext_iff or Semigrp.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Semigrp/Basic.lean
+skipped Mathlib.Algebra.Category.Semigrp.Basic: AddSemigrp.Hom.ext or Semigrp.Hom.ext is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Semigrp/Basic.lean
+skipped Mathlib.Algebra.Category.Semigrp.Basic: AddMagmaCat.ext_iff or MagmaCat.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Semigrp/Basic.lean
+skipped Mathlib.Algebra.Category.Semigrp.Basic: AddMagmaCat.mk.sizeOf_spec or MagmaCat.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Semigrp/Basic.lean
+skipped Mathlib.Algebra.Category.Semigrp.Basic: AddSemigrp.Hom.ext_iff or Semigrp.Hom.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Semigrp/Basic.lean
+skipped Mathlib.Algebra.Category.Semigrp.Basic: AddSemigrp.mk.inj or Semigrp.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Semigrp/Basic.lean
+skipped Mathlib.Algebra.Category.Semigrp.Basic: AddMagmaCat.hom_ext_iff or MagmaCat.hom_ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Category/Semigrp/Basic.lean
+skipped Mathlib.Algebra.Colimit.DirectLimit: DirectLimit.instAddMonoid.congr_simp or DirectLimit.instMonoid.congr_simp is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Colimit/DirectLimit.lean
+skipped Mathlib.Algebra.Free: FreeAddMagma.hom_ext_iff or FreeMagma.hom_ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Free.lean
+skipped Mathlib.Algebra.Free: FreeAddMagma.length.eq_def or FreeMagma.length.eq_def is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Free.lean
+skipped Mathlib.Algebra.Free: FreeAddMagma.brecOn.eq or FreeMagma.brecOn.eq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Free.lean
+skipped Mathlib.Algebra.Free: FreeAddSemigroup.ext or FreeSemigroup.ext is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Free.lean
+skipped Mathlib.Algebra.Free: FreeAddSemigroup.mk.sizeOf_spec or FreeSemigroup.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Free.lean
+skipped Mathlib.Algebra.Free: FreeAddSemigroup.hom_ext_iff or FreeSemigroup.hom_ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Free.lean
+skipped Mathlib.Algebra.Free: AddMagma.FreeAddSemigroup.hom_ext_iff or Magma.AssocQuotient.hom_ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Free.lean
+skipped Mathlib.Algebra.Free: FreeAddSemigroup.ext_iff or FreeSemigroup.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Free.lean
+skipped Mathlib.Algebra.Free: FreeAddSemigroup.mk.inj or FreeSemigroup.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Free.lean
+skipped Mathlib.Algebra.Free: FreeAddSemigroup.mk.injEq or FreeSemigroup.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Free.lean
+skipped Mathlib.Algebra.FreeMonoid.Basic: FreeAddMonoid.hom_eq_iff or FreeMonoid.hom_eq_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/FreeMonoid/Basic.lean
+skipped Mathlib.Algebra.FreeMonoid.UniqueProds: FreeAddMonoid.instTwoUniqueSums or FreeMonoid.instTwoUniqueProds is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/FreeMonoid/UniqueProds.lean
+skipped Mathlib.Algebra.Group.Action.Defs: AddAction.ext or MulAction.ext is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Action/Defs.lean
+skipped Mathlib.Algebra.Group.Action.Defs: AddSemigroupAction.ext_iff or SemigroupAction.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Action/Defs.lean
+skipped Mathlib.Algebra.Group.Action.Defs: AddAction.ext_iff or MulAction.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Action/Defs.lean
+skipped Mathlib.Algebra.Group.Action.Defs: AddSemigroupAction.ext or SemigroupAction.ext is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Action/Defs.lean
+skipped Mathlib.Algebra.Group.Action.Pretransitive: AddAction.isPretransitive_iff or MulAction.isPretransitive_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Action/Pretransitive.lean
+skipped Mathlib.Algebra.Group.Basic: sub_eq_zero_of_eq or div_eq_one_of_eq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Basic.lean
+skipped Mathlib.Algebra.Group.Defs: AddCommMagma.ext_iff or CommMagma.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Defs.lean
+skipped Mathlib.Algebra.Group.Defs: AddLeftCancelSemigroup.ext or LeftCancelSemigroup.ext is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Defs.lean
+skipped Mathlib.Algebra.Group.Defs: AddSemigroup.ext_iff or Semigroup.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Defs.lean
+skipped Mathlib.Algebra.Group.Defs: AddCommSemigroup.ext_iff or CommSemigroup.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Defs.lean
+skipped Mathlib.Algebra.Group.Defs: AddCommSemigroup.ext or CommSemigroup.ext is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Defs.lean
+skipped Mathlib.Algebra.Group.Defs: AddSemigroup.ext or Semigroup.ext is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Defs.lean
+skipped Mathlib.Algebra.Group.Defs: AddZero.ext_iff or MulOne.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Defs.lean
+skipped Mathlib.Algebra.Group.Defs: AddCommMagma.ext or CommMagma.ext is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Defs.lean
+skipped Mathlib.Algebra.Group.Defs: nsmulRec.eq_def or npowRec.eq_def is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Defs.lean
+skipped Mathlib.Algebra.Group.Defs: AddRightCancelSemigroup.ext_iff or RightCancelSemigroup.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Defs.lean
+skipped Mathlib.Algebra.Group.Defs: AddZeroClass.ext_iff or MulOneClass.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Defs.lean
+skipped Mathlib.Algebra.Group.Defs: AddRightCancelSemigroup.ext or RightCancelSemigroup.ext is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Defs.lean
+skipped Mathlib.Algebra.Group.Defs: AddZero.ext or MulOne.ext is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Defs.lean
+skipped Mathlib.Algebra.Group.Defs: AddLeftCancelSemigroup.ext_iff or LeftCancelSemigroup.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Defs.lean
+skipped Mathlib.Algebra.Group.Embedding: addLeftEmbedding.congr_simp or mulLeftEmbedding.congr_simp is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Embedding.lean
+skipped Mathlib.Algebra.Group.Embedding: addRightEmbedding.congr_simp or mulRightEmbedding.congr_simp is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Embedding.lean
+skipped Mathlib.Algebra.Group.End: AddEquiv.mk.congr_simp or MulEquiv.mk.congr_simp is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/End.lean
+skipped Mathlib.Algebra.Group.Equiv.Defs: AddEquiv.mk.sizeOf_spec or MulEquiv.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Equiv/Defs.lean
+skipped Mathlib.Algebra.Group.Equiv.Defs: AddEquiv.mk.inj or MulEquiv.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Equiv/Defs.lean
+skipped Mathlib.Algebra.Group.Equiv.Defs: AddEquiv.ext_iff or MulEquiv.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Equiv/Defs.lean
+skipped Mathlib.Algebra.Group.Equiv.Defs: AddEquiv.mk.injEq or MulEquiv.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Equiv/Defs.lean
+skipped Mathlib.Algebra.Group.Equiv.TypeTags: ZeroHom.mk.congr_simp or OneHom.mk.congr_simp is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Equiv/TypeTags.lean
+skipped Mathlib.Algebra.Group.Equiv.TypeTags: AddMonoidHom.mk.congr_simp or MonoidHom.mk.congr_simp is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Equiv/TypeTags.lean
+skipped Mathlib.Algebra.Group.Ext: SubNegMonoid.ext_iff or DivInvMonoid.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Ext.lean
+skipped Mathlib.Algebra.Group.Ext: AddLeftCancelMonoid.ext_iff or LeftCancelMonoid.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Ext.lean
+skipped Mathlib.Algebra.Group.Ext: AddMonoid.ext_iff or Monoid.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Ext.lean
+skipped Mathlib.Algebra.Group.Ext: AddRightCancelMonoid.ext_iff or RightCancelMonoid.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Ext.lean
+skipped Mathlib.Algebra.Group.Ext: AddCancelCommMonoid.ext_iff or CancelCommMonoid.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Ext.lean
+skipped Mathlib.Algebra.Group.Ext: AddGroup.ext_iff or Group.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Ext.lean
+skipped Mathlib.Algebra.Group.Ext: AddCancelCommMonoid.mk.hcongr_3 or CancelCommMonoid.mk.hcongr_3 is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Ext.lean
+skipped Mathlib.Algebra.Group.Ext: AddCommMonoid.ext_iff or CommMonoid.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Ext.lean
+skipped Mathlib.Algebra.Group.Ext: AddCancelMonoid.ext_iff or CancelMonoid.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Ext.lean
+skipped Mathlib.Algebra.Group.Ext: AddCommGroup.ext_iff or CommGroup.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Ext.lean
+skipped Mathlib.Algebra.Group.Hom.Defs: ZeroHom.mk.injEq or OneHom.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Hom/Defs.lean
+skipped Mathlib.Algebra.Group.Hom.Defs: AddMonoidHom.mk.injEq or MonoidHom.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Hom/Defs.lean
+skipped Mathlib.Algebra.Group.Hom.Defs: ZeroHom.mk.sizeOf_spec or OneHom.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Hom/Defs.lean
+skipped Mathlib.Algebra.Group.Hom.Defs: ZeroHom.ext_iff or OneHom.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Hom/Defs.lean
+skipped Mathlib.Algebra.Group.Hom.Defs: AddHom.ext_iff or MulHom.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Hom/Defs.lean
+skipped Mathlib.Algebra.Group.Hom.Defs: AddHom.mk.injEq or MulHom.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Hom/Defs.lean
+skipped Mathlib.Algebra.Group.Hom.Defs: AddMonoidHom.mk.inj or MonoidHom.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Hom/Defs.lean
+skipped Mathlib.Algebra.Group.Hom.Defs: ZeroHom.mk.inj or OneHom.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Hom/Defs.lean
+skipped Mathlib.Algebra.Group.Hom.Defs: AddHom.mk.inj or MulHom.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Hom/Defs.lean
+skipped Mathlib.Algebra.Group.Hom.Defs: AddHom.mk.sizeOf_spec or MulHom.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Hom/Defs.lean
+skipped Mathlib.Algebra.Group.Hom.Defs: AddMonoidHom.mk.sizeOf_spec or MonoidHom.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Hom/Defs.lean
+skipped Mathlib.Algebra.Group.Hom.Defs: AddMonoidHom.ext_iff or MonoidHom.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Hom/Defs.lean
+skipped Mathlib.Algebra.Group.Indicator: AddMonoidHom.map_indicator or MonoidHom.map_mulIndicator is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Indicator.lean
+skipped Mathlib.Algebra.Group.Pi.Lemmas: Pi.single.hcongr_7 or Pi.mulSingle.hcongr_7 is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Pi/Lemmas.lean
+skipped Mathlib.Algebra.Group.Pointwise.Set.Small: small_sub or small_div is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Pointwise/Set/Small.lean
+skipped Mathlib.Algebra.Group.Pointwise.Set.Small: small_add or small_mul is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Pointwise/Set/Small.lean
+skipped Mathlib.Algebra.Group.Pointwise.Set.Small: small_set_zero or small_set_one is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Pointwise/Set/Small.lean
+skipped Mathlib.Algebra.Group.Subgroup.Basic: AddSubgroup.normal_of_characteristic or Subgroup.normal_of_characteristic is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Basic.lean
+skipped Mathlib.Algebra.Group.Subgroup.Defs: AddSubgroup.mk.sizeOf_spec or Subgroup.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Defs.lean
+skipped Mathlib.Algebra.Group.Subgroup.Defs: AddSubgroup.ext_iff or Subgroup.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Defs.lean
+skipped Mathlib.Algebra.Group.Subgroup.Defs: AddSubgroup.mk.injEq or Subgroup.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Defs.lean
+skipped Mathlib.Algebra.Group.Subgroup.Defs: AddSubgroup.mk.inj or Subgroup.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Subgroup/Defs.lean
+skipped Mathlib.Algebra.Group.Submonoid.Defs: AddSubmonoid.mk.injEq or Submonoid.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Submonoid/Defs.lean
+skipped Mathlib.Algebra.Group.Submonoid.Defs: AddSubmonoid.mk.sizeOf_spec or Submonoid.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Submonoid/Defs.lean
+skipped Mathlib.Algebra.Group.Submonoid.Defs: AddSubmonoid.mk.inj or Submonoid.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Submonoid/Defs.lean
+skipped Mathlib.Algebra.Group.Submonoid.Defs: AddSubmonoid.ext_iff or Submonoid.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Submonoid/Defs.lean
+skipped Mathlib.Algebra.Group.Submonoid.Operations: AddSubmonoid.map.congr_simp or Submonoid.map.congr_simp is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Submonoid/Operations.lean
+skipped Mathlib.Algebra.Group.Subsemigroup.Defs: AddSubsemigroup.mk.inj or Subsemigroup.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Subsemigroup/Defs.lean
+skipped Mathlib.Algebra.Group.Subsemigroup.Defs: AddSubsemigroup.mk.injEq or Subsemigroup.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Subsemigroup/Defs.lean
+skipped Mathlib.Algebra.Group.Subsemigroup.Defs: AddSubsemigroup.ext_iff or Subsemigroup.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Subsemigroup/Defs.lean
+skipped Mathlib.Algebra.Group.Subsemigroup.Defs: AddSubsemigroup.mk.sizeOf_spec or Subsemigroup.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Subsemigroup/Defs.lean
+skipped Mathlib.Algebra.Group.Torsion: IsAddTorsionFree.nsmul_eq_zero_iff' or IsMulTorsionFree.pow_eq_one_iff' is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Torsion.lean
+skipped Mathlib.Algebra.Group.Units.Defs: AddUnits.mk.sizeOf_spec or Units.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Units/Defs.lean
+skipped Mathlib.Algebra.Group.Units.Defs: AddUnits.mk.inj or Units.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Units/Defs.lean
+skipped Mathlib.Algebra.Group.Units.Defs: AddUnits.mk.injEq or Units.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Units/Defs.lean
+skipped Mathlib.Algebra.Group.Units.Defs: AddUnits.ext_iff or Units.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/Units/Defs.lean
+skipped Mathlib.Algebra.Group.WithOne.Basic: WithZero.map_id or WithOne.map_id is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/WithOne/Basic.lean
+skipped Mathlib.Algebra.Group.WithOne.Basic: WithZero.map_map or WithOne.map_map is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/WithOne/Basic.lean
+skipped Mathlib.Algebra.Group.WithOne.Basic: WithZero.map_inj or WithOne.map_inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/WithOne/Basic.lean
+skipped Mathlib.Algebra.Group.WithOne.Basic: WithZero.map_injective or WithOne.map_injective is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/WithOne/Basic.lean
+skipped Mathlib.Algebra.Group.WithOne.Basic: WithZero.map_comp or WithOne.map_comp is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/WithOne/Basic.lean
+skipped Mathlib.Algebra.Group.WithOne.Basic: WithZero.map_injective' or WithOne.map_injective' is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/WithOne/Basic.lean
+skipped Mathlib.Algebra.Group.WithOne.Defs: WithZero.unzero.congr_simp or WithOne.unone.congr_simp is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Group/WithOne/Defs.lean
+skipped Mathlib.Algebra.Module.Congruence.Defs: VAddCon.mk.injEq or SMulCon.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Module/Congruence/Defs.lean
+skipped Mathlib.Algebra.Module.Congruence.Defs: VAddCon.mk.inj or SMulCon.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Module/Congruence/Defs.lean
+skipped Mathlib.Algebra.Module.Congruence.Defs: VAddCon.mk.sizeOf_spec or SMulCon.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Module/Congruence/Defs.lean
+skipped Mathlib.Algebra.MonoidAlgebra.Defs: AddMonoidAlgebra.ext_iff or MonoidAlgebra.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/MonoidAlgebra/Defs.lean
+skipped Mathlib.Algebra.MonoidAlgebra.Defs: AddMonoidAlgebra.addHom_ext'_iff or MonoidAlgebra.addHom_ext'_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/MonoidAlgebra/Defs.lean
+skipped Mathlib.Algebra.MonoidAlgebra.Module: AddMonoidAlgebra.lhom_ext'_iff or MonoidAlgebra.lhom_ext'_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/MonoidAlgebra/Module.lean
+skipped Mathlib.Algebra.Notation.Defs: VAdd.ext or SMul.ext is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Notation/Defs.lean
+skipped Mathlib.Algebra.Notation.Defs: VAdd.ext_iff or SMul.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Notation/Defs.lean
+skipped Mathlib.Algebra.Notation.Pi.Basic: Pi.single.congr_simp or Pi.mulSingle.congr_simp is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Notation/Pi/Basic.lean
+skipped Mathlib.Algebra.Order.Archimedean.Class: FiniteArchimedeanClass.lift.congr_simp or FiniteMulArchimedeanClass.lift.congr_simp is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Order/Archimedean/Class.lean
+skipped Mathlib.Algebra.Order.Archimedean.Class: ArchimedeanClass.lift.congr_simp or MulArchimedeanClass.lift.congr_simp is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Order/Archimedean/Class.lean
+skipped Mathlib.Algebra.Order.BigOperators.Group.Finset: CanonicallyOrderedAddCommMonoid.single_le_sum or CanonicallyOrderedCommMonoid.single_le_prod is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Order/BigOperators/Group/Finset.lean
+skipped Mathlib.Algebra.Order.Group.Cone: AddGroupCone.mk.inj or GroupCone.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Order/Group/Cone.lean
+skipped Mathlib.Algebra.Order.Group.Cone: AddGroupCone.mk.injEq or GroupCone.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Order/Group/Cone.lean
+skipped Mathlib.Algebra.Order.Group.Cone: AddGroupCone.nonneg.isMaxCone or GroupCone.oneLE.isMaxMulCone is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Order/Group/Cone.lean
+skipped Mathlib.Algebra.Order.Group.Cone: AddGroupCone.mk.sizeOf_spec or GroupCone.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Order/Group/Cone.lean
+skipped Mathlib.Algebra.Order.Group.Defs: OrderedAddCommGroup.add_lt_add_left' or LinearOrderedCommGroup.mul_lt_mul_left' is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Order/Group/Defs.lean
+skipped Mathlib.Algebra.Order.Group.Defs: OrderedAddCommGroup.add_lt_add_left' or OrderedCommGroup.mul_lt_mul_left' is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Order/Group/Defs.lean
+skipped Mathlib.Algebra.Order.Hom.Monoid: OrderAddMonoidIso.ext_iff or OrderMonoidIso.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Order/Hom/Monoid.lean
+skipped Mathlib.Algebra.Order.Hom.Monoid: OrderAddMonoidHom.mk.sizeOf_spec or OrderMonoidHom.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Order/Hom/Monoid.lean
+skipped Mathlib.Algebra.Order.Hom.Monoid: OrderAddMonoidIso.mk.sizeOf_spec or OrderMonoidIso.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Order/Hom/Monoid.lean
+skipped Mathlib.Algebra.Order.Hom.Monoid: OrderAddMonoidHom.ext_iff or OrderMonoidHom.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Order/Hom/Monoid.lean
+skipped Mathlib.Algebra.Order.Hom.Monoid: OrderAddMonoidIso.mk.injEq or OrderMonoidIso.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Order/Hom/Monoid.lean
+skipped Mathlib.Algebra.Order.Hom.Monoid: OrderAddMonoidHom.mk.injEq or OrderMonoidHom.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Order/Hom/Monoid.lean
+skipped Mathlib.Algebra.Order.Hom.Monoid: OrderAddMonoidHom.mk.inj or OrderMonoidHom.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Order/Hom/Monoid.lean
+skipped Mathlib.Algebra.Order.Hom.Monoid: OrderAddMonoidIso.mk.inj or OrderMonoidIso.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Order/Hom/Monoid.lean
+skipped Mathlib.Algebra.Order.Interval.Basic: instAddInterval.congr_simp or instMulInterval.congr_simp is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Order/Interval/Basic.lean
+skipped Mathlib.Algebra.Order.Quantale: AddQuantale.mk.sizeOf_spec or Quantale.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Order/Quantale.lean
+skipped Mathlib.Algebra.Order.Ring.Opposite: AddOpposite.instIsOrderedRing or MulOpposite.instIsOrderedRing is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Order/Ring/Opposite.lean
+skipped Mathlib.Algebra.PresentedMonoid.Basic: PresentedAddMonoid.ext_iff or PresentedMonoid.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/PresentedMonoid/Basic.lean
+skipped Mathlib.Algebra.Ring.Opposite: AddOpposite.instIsDomain or MulOpposite.instIsDomain is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Algebra/Ring/Opposite.lean
+skipped Mathlib.Analysis.Normed.Group.Basic: edist_zero_eq_enorm or edist_one_eq_enorm is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Analysis/Normed/Group/Basic.lean
+skipped Mathlib.Analysis.Normed.Group.Seminorm: AddGroupNorm.mk.injEq or GroupNorm.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Analysis/Normed/Group/Seminorm.lean
+skipped Mathlib.Analysis.Normed.Group.Seminorm: AddGroupNorm.ext_iff or GroupNorm.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Analysis/Normed/Group/Seminorm.lean
+skipped Mathlib.Analysis.Normed.Group.Seminorm: AddGroupSeminorm.mk.injEq or GroupSeminorm.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Analysis/Normed/Group/Seminorm.lean
+skipped Mathlib.Analysis.Normed.Group.Seminorm: AddGroupNorm.mk.sizeOf_spec or GroupNorm.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Analysis/Normed/Group/Seminorm.lean
+skipped Mathlib.Analysis.Normed.Group.Seminorm: AddGroupSeminorm.mk.sizeOf_spec or GroupSeminorm.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Analysis/Normed/Group/Seminorm.lean
+skipped Mathlib.Analysis.Normed.Group.Seminorm: AddGroupSeminorm.mk.inj or GroupSeminorm.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Analysis/Normed/Group/Seminorm.lean
+skipped Mathlib.Analysis.Normed.Group.Seminorm: AddGroupSeminorm.ext_iff or GroupSeminorm.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Analysis/Normed/Group/Seminorm.lean
+skipped Mathlib.Analysis.Normed.Group.Seminorm: AddGroupNorm.mk.inj or GroupNorm.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Analysis/Normed/Group/Seminorm.lean
+skipped Mathlib.Combinatorics.Additive.Convolution: Finset.addConvolution.congr_simp or Finset.convolution.congr_simp is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Combinatorics/Additive/Convolution.lean
+skipped Mathlib.Combinatorics.Additive.DoublingConst: Finset.subConst.congr_simp or Finset.divConst.congr_simp is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Combinatorics/Additive/DoublingConst.lean
+skipped Mathlib.Combinatorics.Additive.DoublingConst: Finset.addConst.congr_simp or Finset.mulConst.congr_simp is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Combinatorics/Additive/DoublingConst.lean
+skipped Mathlib.Combinatorics.Hindman: Hindman.FS.brecOn or Hindman.FP.brecOn is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Combinatorics/Hindman.lean
+skipped Mathlib.Combinatorics.Quiver.Path.Weight: Quiver.Path.addWeight.eq_def or Quiver.Path.weight.eq_def is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Combinatorics/Quiver/Path/Weight.lean
+skipped Mathlib.Data.DFinsupp.BigOperators: DFinsupp.sum.congr_simp or DFinsupp.prod.congr_simp is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Data/DFinsupp/BigOperators.lean
+skipped Mathlib.Data.Fin.Tuple.Reflection: FinVec.sum.eq_def or FinVec.prod.eq_def is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Data/Fin/Tuple/Reflection.lean
+skipped Mathlib.Data.Finset.NoncommProd: Finset.noncommSum_add_single or Finset.noncommProd_mul_single is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Data/Finset/NoncommProd.lean
+skipped Mathlib.Data.Finset.NoncommProd: Multiset.noncommSum.congr_simp or Multiset.noncommProd.congr_simp is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Data/Finset/NoncommProd.lean
+skipped Mathlib.Geometry.Manifold.Algebra.Monoid: ContMDiffAddMonoidMorphism.mk.injEq or ContMDiffMonoidMorphism.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Geometry/Manifold/Algebra/Monoid.lean
+skipped Mathlib.Geometry.Manifold.Algebra.Monoid: ContMDiffAddMonoidMorphism.mk.sizeOf_spec or ContMDiffMonoidMorphism.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Geometry/Manifold/Algebra/Monoid.lean
+skipped Mathlib.Geometry.Manifold.Algebra.Monoid: ContMDiffAddMonoidMorphism.mk.inj or ContMDiffMonoidMorphism.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Geometry/Manifold/Algebra/Monoid.lean
+skipped Mathlib.Geometry.Manifold.GroupLieAlgebra: instLieRingAddGroupLieAlgebra.congr_simp or instLieRingGroupLieAlgebra.congr_simp is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Geometry/Manifold/GroupLieAlgebra.lean
+skipped Mathlib.GroupTheory.Congruence.Defs: AddCon.mk.injEq or Con.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/Congruence/Defs.lean
+skipped Mathlib.GroupTheory.Congruence.Defs: AddCon.mk.inj or Con.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/Congruence/Defs.lean
+skipped Mathlib.GroupTheory.Congruence.Defs: AddCon.ext_iff or Con.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/Congruence/Defs.lean
+skipped Mathlib.GroupTheory.Congruence.Defs: AddCon.mk.sizeOf_spec or Con.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/Congruence/Defs.lean
+skipped Mathlib.GroupTheory.Congruence.Defs: AddConGen.Rel.brecOn or ConGen.Rel.brecOn is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/Congruence/Defs.lean
+skipped Mathlib.GroupTheory.Congruence.Hom: AddCon.hom_ext_iff or Con.hom_ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/Congruence/Hom.lean
+skipped Mathlib.GroupTheory.Coprod.Basic: AddMonoid.Coprod.hom_ext_iff or Monoid.Coprod.hom_ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/Coprod/Basic.lean
+skipped Mathlib.GroupTheory.FiniteIndexNormalSubgroup: FiniteIndexNormalAddSubgroup.ext or FiniteIndexNormalSubgroup.ext is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/FiniteIndexNormalSubgroup.lean
+skipped Mathlib.GroupTheory.FiniteIndexNormalSubgroup: FiniteIndexNormalAddSubgroup.mk.sizeOf_spec or FiniteIndexNormalSubgroup.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/FiniteIndexNormalSubgroup.lean
+skipped Mathlib.GroupTheory.FiniteIndexNormalSubgroup: FiniteIndexNormalAddSubgroup.mk.injEq or FiniteIndexNormalSubgroup.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/FiniteIndexNormalSubgroup.lean
+skipped Mathlib.GroupTheory.FiniteIndexNormalSubgroup: FiniteIndexNormalAddSubgroup.mk.inj or FiniteIndexNormalSubgroup.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/FiniteIndexNormalSubgroup.lean
+skipped Mathlib.GroupTheory.FiniteIndexNormalSubgroup: FiniteIndexNormalAddSubgroup.ext_iff or FiniteIndexNormalSubgroup.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/FiniteIndexNormalSubgroup.lean
+skipped Mathlib.GroupTheory.FreeGroup.Basic: FreeAddGroup.ext_hom_iff or FreeGroup.ext_hom_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/FreeGroup/Basic.lean
+skipped Mathlib.GroupTheory.FreeGroup.Reduce: FreeGroup.freeAddGroup.red.reduce_eq or FreeGroup.red.reduce_eq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/FreeGroup/Reduce.lean
+skipped Mathlib.GroupTheory.GroupAction.Basic: AddAction.stabilizerEquivStabilizer.congr_simp or MulAction.stabilizerEquivStabilizer.congr_simp is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupAction/Basic.lean
+skipped Mathlib.GroupTheory.GroupAction.Basic: AddEquiv.addSubgroupCongr.congr_simp or MulEquiv.subgroupCongr.congr_simp is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupAction/Basic.lean
+skipped Mathlib.GroupTheory.GroupAction.Hom: AddActionHom.mk.sizeOf_spec or MulActionHom.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupAction/Hom.lean
+skipped Mathlib.GroupTheory.GroupAction.Hom: AddActionHom.mk.injEq or MulActionHom.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupAction/Hom.lean
+skipped Mathlib.GroupTheory.GroupAction.Hom: AddActionHom.mk.inj or MulActionHom.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupAction/Hom.lean
+skipped Mathlib.GroupTheory.GroupAction.Hom: AddActionHom.ext_iff or MulActionHom.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupAction/Hom.lean
+skipped Mathlib.GroupTheory.GroupAction.IterateAct: IterateAddAct.ext_iff or IterateMulAct.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupAction/IterateAct.lean
+skipped Mathlib.GroupTheory.GroupAction.IterateAct: IterateAddAct.ext or IterateMulAct.ext is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupAction/IterateAct.lean
+skipped Mathlib.GroupTheory.GroupAction.IterateAct: IterateAddAct.mk.sizeOf_spec or IterateMulAct.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupAction/IterateAct.lean
+skipped Mathlib.GroupTheory.GroupAction.IterateAct: IterateAddAct.mk.inj or IterateMulAct.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupAction/IterateAct.lean
+skipped Mathlib.GroupTheory.GroupAction.IterateAct: IterateAddAct.mk.injEq or IterateMulAct.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupAction/IterateAct.lean
+skipped Mathlib.GroupTheory.GroupAction.MultiplePrimitivity: AddAction.isMultiplyPreprimitive_iff or MulAction.isMultiplyPreprimitive_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupAction/MultiplePrimitivity.lean
+skipped Mathlib.GroupTheory.GroupAction.SubMulAction: SubAddAction.ext_iff or SubMulAction.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupAction/SubMulAction.lean
+skipped Mathlib.GroupTheory.GroupAction.SubMulAction: SubAddAction.mk.inj or SubMulAction.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupAction/SubMulAction.lean
+skipped Mathlib.GroupTheory.GroupAction.SubMulAction: SubAddAction.mk.injEq or SubMulAction.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupAction/SubMulAction.lean
+skipped Mathlib.GroupTheory.GroupAction.SubMulAction: SubAddAction.mk.sizeOf_spec or SubMulAction.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupAction/SubMulAction.lean
+skipped Mathlib.GroupTheory.GroupAction.SubMulAction.OfStabilizer: SubAddAction.vadd'.congr_simp or SubMulAction.smul'.congr_simp is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupAction/SubMulAction/OfStabilizer.lean
+skipped Mathlib.GroupTheory.GroupExtension.Defs: AddGroupExtension.Equiv.mk.sizeOf_spec or GroupExtension.Equiv.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupExtension/Defs.lean
+skipped Mathlib.GroupTheory.GroupExtension.Defs: AddGroupExtension.Equiv.mk.inj or GroupExtension.Equiv.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupExtension/Defs.lean
+skipped Mathlib.GroupTheory.GroupExtension.Defs: AddGroupExtension.Splitting.mk.injEq or GroupExtension.Splitting.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupExtension/Defs.lean
+skipped Mathlib.GroupTheory.GroupExtension.Defs: AddGroupExtension.Section.mk.sizeOf_spec or GroupExtension.Section.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupExtension/Defs.lean
+skipped Mathlib.GroupTheory.GroupExtension.Defs: AddGroupExtension.Equiv.mk.injEq or GroupExtension.Equiv.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupExtension/Defs.lean
+skipped Mathlib.GroupTheory.GroupExtension.Defs: AddGroupExtension.Section.mk.inj or GroupExtension.Section.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupExtension/Defs.lean
+skipped Mathlib.GroupTheory.GroupExtension.Defs: AddGroupExtension.Section.mk.injEq or GroupExtension.Section.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupExtension/Defs.lean
+skipped Mathlib.GroupTheory.GroupExtension.Defs: AddGroupExtension.mk.inj or GroupExtension.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupExtension/Defs.lean
+skipped Mathlib.GroupTheory.GroupExtension.Defs: AddGroupExtension.Splitting.mk.inj or GroupExtension.Splitting.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupExtension/Defs.lean
+skipped Mathlib.GroupTheory.GroupExtension.Defs: AddGroupExtension.mk.injEq or GroupExtension.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupExtension/Defs.lean
+skipped Mathlib.GroupTheory.GroupExtension.Defs: AddGroupExtension.Splitting.mk.sizeOf_spec or GroupExtension.Splitting.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupExtension/Defs.lean
+skipped Mathlib.GroupTheory.GroupExtension.Defs: AddGroupExtension.mk.sizeOf_spec or GroupExtension.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupExtension/Defs.lean
+skipped Mathlib.GroupTheory.GroupExtension.Defs: AddGroupExtension.Equiv.symm_symm_apply or GroupExtension.Equiv.symm_symm_apply is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/GroupExtension/Defs.lean
+skipped Mathlib.GroupTheory.IsSubnormal: AddSubgroup.IsSubnormal.brecOn or Subgroup.IsSubnormal.brecOn is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/IsSubnormal.lean
+skipped Mathlib.GroupTheory.IsSubnormal: AddSubgroup.addSubgroupOf.hcongr_4 or Subgroup.subgroupOf.hcongr_4 is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/IsSubnormal.lean
+skipped Mathlib.GroupTheory.IsSubnormal: AddSubgroup.toAddGroup.hcongr_3 or Subgroup.toGroup.hcongr_3 is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/IsSubnormal.lean
+skipped Mathlib.GroupTheory.IsSubnormal: AddSubgroup.Normal.hcongr_3 or Subgroup.Normal.hcongr_3 is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/IsSubnormal.lean
+skipped Mathlib.GroupTheory.MonoidLocalization.Basic: AddSubmonoid.LocalizationMap.ext_iff or Submonoid.LocalizationMap.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/MonoidLocalization/Basic.lean
+skipped Mathlib.GroupTheory.MonoidLocalization.Basic: AddSubmonoid.isLocalizationMap_iff or Submonoid.isLocalizationMap_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/MonoidLocalization/Basic.lean
+skipped Mathlib.GroupTheory.MonoidLocalization.Basic: AddSubmonoid.LocalizationMap.mk.sizeOf_spec or Submonoid.LocalizationMap.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/MonoidLocalization/Basic.lean
+skipped Mathlib.GroupTheory.MonoidLocalization.Basic: AddSubmonoid.LocalizationMap.mk.inj or Submonoid.LocalizationMap.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/MonoidLocalization/Basic.lean
+skipped Mathlib.GroupTheory.MonoidLocalization.Basic: AddSubmonoid.LocalizationMap.mk.injEq or Submonoid.LocalizationMap.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/MonoidLocalization/Basic.lean
+skipped Mathlib.GroupTheory.QuotientGroup.Defs: QuotientAddGroup.addMonoidHom_ext_iff or QuotientGroup.monoidHom_ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/QuotientGroup/Defs.lean
+skipped Mathlib.GroupTheory.QuotientGroup.Defs: QuotientAddGroup.map.congr_simp or QuotientGroup.map.congr_simp is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/QuotientGroup/Defs.lean
+skipped Mathlib.GroupTheory.QuotientGroup.Finite: Finite.of_finite_quot_finite_addSubgroup or Finite.of_finite_quot_finite_subgroup is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/GroupTheory/QuotientGroup/Finite.lean
+skipped Mathlib.LinearAlgebra.Finsupp.VectorSpace: AddMonoidAlgebra.instFree or MonoidAlgebra.instFree is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/LinearAlgebra/Finsupp/VectorSpace.lean
+skipped Mathlib.MeasureTheory.Measure.Haar.MulEquivHaarChar: MeasureTheory.addEquivAddHaarChar.congr_simp or MeasureTheory.mulEquivHaarChar.congr_simp is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/MeasureTheory/Measure/Haar/MulEquivHaarChar.lean
+skipped Mathlib.RingTheory.FiniteType: AddMonoidAlgebra.finiteType_of_fg or MonoidAlgebra.finiteType_of_fg is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/RingTheory/FiniteType.lean
+skipped Mathlib.RingTheory.Finiteness.Finsupp: AddMonoidAlgebra.moduleFinite or MonoidAlgebra.moduleFinite is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/RingTheory/Finiteness/Finsupp.lean
+skipped Mathlib.Topology.Algebra.Category.ProfiniteGrp.Basic: ProfiniteAddGrp.mk.injEq or ProfiniteGrp.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/Category/ProfiniteGrp/Basic.lean
+skipped Mathlib.Topology.Algebra.Category.ProfiniteGrp.Basic: ProfiniteAddGrp.hom_ext_iff or ProfiniteGrp.hom_ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/Category/ProfiniteGrp/Basic.lean
+skipped Mathlib.Topology.Algebra.Category.ProfiniteGrp.Basic: ProfiniteAddGrp.mk.sizeOf_spec or ProfiniteGrp.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/Category/ProfiniteGrp/Basic.lean
+skipped Mathlib.Topology.Algebra.Category.ProfiniteGrp.Basic: ProfiniteAddGrp.limit_ext_iff or ProfiniteGrp.limit_ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/Category/ProfiniteGrp/Basic.lean
+skipped Mathlib.Topology.Algebra.Category.ProfiniteGrp.Basic: ProfiniteAddGrp.Hom.ext or ProfiniteGrp.Hom.ext is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/Category/ProfiniteGrp/Basic.lean
+skipped Mathlib.Topology.Algebra.Category.ProfiniteGrp.Basic: ProfiniteAddGrp.Hom.ext_iff or ProfiniteGrp.Hom.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/Category/ProfiniteGrp/Basic.lean
+skipped Mathlib.Topology.Algebra.Category.ProfiniteGrp.Basic: ProfiniteAddGrp.mk.inj or ProfiniteGrp.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/Category/ProfiniteGrp/Basic.lean
+skipped Mathlib.Topology.Algebra.ContinuousMonoidHom: ContinuousAddEquiv.ext_iff or ContinuousMulEquiv.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/ContinuousMonoidHom.lean
+skipped Mathlib.Topology.Algebra.ContinuousMonoidHom: ContinuousAddEquiv.mk.injEq or ContinuousMulEquiv.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/ContinuousMonoidHom.lean
+skipped Mathlib.Topology.Algebra.ContinuousMonoidHom: ContinuousAddMonoidHom.ext_iff or ContinuousMonoidHom.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/ContinuousMonoidHom.lean
+skipped Mathlib.Topology.Algebra.ContinuousMonoidHom: ContinuousAddMonoidHom.mk.sizeOf_spec or ContinuousMonoidHom.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/ContinuousMonoidHom.lean
+skipped Mathlib.Topology.Algebra.ContinuousMonoidHom: ContinuousAddMonoidHom.mk.injEq or ContinuousMonoidHom.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/ContinuousMonoidHom.lean
+skipped Mathlib.Topology.Algebra.ContinuousMonoidHom: ContinuousAddMonoidHom.mk.inj or ContinuousMonoidHom.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/ContinuousMonoidHom.lean
+skipped Mathlib.Topology.Algebra.ContinuousMonoidHom: ContinuousAddEquiv.mk.sizeOf_spec or ContinuousMulEquiv.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/ContinuousMonoidHom.lean
+skipped Mathlib.Topology.Algebra.ContinuousMonoidHom: ContinuousAddEquiv.mk.inj or ContinuousMulEquiv.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/ContinuousMonoidHom.lean
+skipped Mathlib.Topology.Algebra.Group.Basic: TopologicalGroup.isOpenMap_iff_nhds_zero or TopologicalGroup.isOpenMap_iff_nhds_one is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/Group/Basic.lean
+skipped Mathlib.Topology.Algebra.Group.ClosedSubgroup: ClosedAddSubgroup.mk.inj or ClosedSubgroup.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/Group/ClosedSubgroup.lean
+skipped Mathlib.Topology.Algebra.Group.ClosedSubgroup: ClosedAddSubgroup.mk.injEq or ClosedSubgroup.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/Group/ClosedSubgroup.lean
+skipped Mathlib.Topology.Algebra.Group.ClosedSubgroup: ClosedAddSubgroup.ext_iff or ClosedSubgroup.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/Group/ClosedSubgroup.lean
+skipped Mathlib.Topology.Algebra.Group.ClosedSubgroup: ClosedAddSubgroup.ext or ClosedSubgroup.ext is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/Group/ClosedSubgroup.lean
+skipped Mathlib.Topology.Algebra.Group.ClosedSubgroup: ClosedAddSubgroup.mk.sizeOf_spec or ClosedSubgroup.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/Group/ClosedSubgroup.lean
+skipped Mathlib.Topology.Algebra.Group.GroupTopology: AddGroupTopology.mk.sizeOf_spec or GroupTopology.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/Group/GroupTopology.lean
+skipped Mathlib.Topology.Algebra.Group.GroupTopology: AddGroupTopology.mk.inj or GroupTopology.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/Group/GroupTopology.lean
+skipped Mathlib.Topology.Algebra.Group.GroupTopology: AddGroupTopology.ext'_iff or GroupTopology.ext'_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/Group/GroupTopology.lean
+skipped Mathlib.Topology.Algebra.Group.GroupTopology: AddGroupTopology.mk.injEq or GroupTopology.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/Group/GroupTopology.lean
+skipped Mathlib.Topology.Algebra.InfiniteSum.UniformOn: HasSumUniformlyOn.tsum_eq or HasProdUniformlyOn.tprod_eq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/InfiniteSum/UniformOn.lean
+skipped Mathlib.Topology.Algebra.IsUniformGroup.DiscreteSubgroup: AddSubgroup.addSubgroupOfEquivOfLe.congr_simp or Subgroup.subgroupOfEquivOfLe.congr_simp is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/IsUniformGroup/DiscreteSubgroup.lean
+skipped Mathlib.Topology.Algebra.OpenSubgroup: OpenNormalAddSubgroup.ext_iff or OpenNormalSubgroup.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/OpenSubgroup.lean
+skipped Mathlib.Topology.Algebra.OpenSubgroup: OpenAddSubgroup.ext_iff or OpenSubgroup.ext_iff is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/OpenSubgroup.lean
+skipped Mathlib.Topology.Algebra.OpenSubgroup: OpenNormalAddSubgroup.mk.inj or OpenNormalSubgroup.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/OpenSubgroup.lean
+skipped Mathlib.Topology.Algebra.OpenSubgroup: OpenNormalAddSubgroup.mk.injEq or OpenNormalSubgroup.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/OpenSubgroup.lean
+skipped Mathlib.Topology.Algebra.OpenSubgroup: OpenAddSubgroup.mk.injEq or OpenSubgroup.mk.injEq is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/OpenSubgroup.lean
+skipped Mathlib.Topology.Algebra.OpenSubgroup: OpenNormalAddSubgroup.ext or OpenNormalSubgroup.ext is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/OpenSubgroup.lean
+skipped Mathlib.Topology.Algebra.OpenSubgroup: OpenAddSubgroup.mk.inj or OpenSubgroup.mk.inj is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/OpenSubgroup.lean
+skipped Mathlib.Topology.Algebra.OpenSubgroup: OpenNormalAddSubgroup.mk.sizeOf_spec or OpenNormalSubgroup.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/OpenSubgroup.lean
+skipped Mathlib.Topology.Algebra.OpenSubgroup: OpenAddSubgroup.mk.sizeOf_spec or OpenSubgroup.mk.sizeOf_spec is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/OpenSubgroup.lean
+skipped Mathlib.Topology.Algebra.RestrictedProduct.Basic: RestrictedProduct.single.congr_simp or RestrictedProduct.mulSingle.congr_simp is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/RestrictedProduct/Basic.lean
+skipped Mathlib.Topology.Algebra.Ring.Basic: instIsTopologicalRingAddOpposite or instIsTopologicalRingMulOpposite is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/Ring/Basic.lean
+skipped Mathlib.Topology.Algebra.Ring.Basic: instIsTopologicalSemiringAddOpposite or instIsTopologicalSemiringMulOpposite is not a plain `theorem`/`lemma` in .lake/packages/mathlib/Mathlib/Topology/Algebra/Ring/Basic.lean
+.lake/packages/batteries/Batteries/Data/List/Lemmas.lean:1391: sum_eq_foldr is a hand-written twin of prod_eq_foldr (via auto)
+.lake/packages/batteries/Batteries/Data/List/Lemmas.lean:1373: sum_pair is a hand-written twin of prod_pair (via auto)
+.lake/packages/batteries/Batteries/Data/List/Lemmas.lean:1370: sum_singleton is a hand-written twin of prod_singleton (via auto)
+.lake/packages/mathlib/Mathlib/Algebra/BigOperators/Expect.lean:278: expect_neg_index is a hand-written twin of expect_inv_index (via auto)
+.lake/packages/mathlib/Mathlib/Algebra/BigOperators/Intervals.lean:163: sum_range_reflect is a hand-written twin of prod_range_reflect (via auto)
+.lake/packages/mathlib/Mathlib/Algebra/BigOperators/Intervals.lean:151: sum_Ico_reflect is a hand-written twin of prod_Ico_reflect (via auto)
+.lake/packages/mathlib/Mathlib/Algebra/BigOperators/NatAntidiagonal.lean:30: sum_antidiagonal_succ is a hand-written twin of prod_antidiagonal_succ (via auto)
+.lake/packages/mathlib/Mathlib/Algebra/BigOperators/NatAntidiagonal.lean:45: sum_antidiagonal_succ' is a hand-written twin of prod_antidiagonal_succ' (via auto)
+.lake/packages/mathlib/Mathlib/Algebra/Category/Grp/CartesianMonoidal.lean:130: tensorObj_eq is a hand-written twin of tensorObj_eq (via renamed)
+.lake/packages/mathlib/Mathlib/Algebra/Category/Grp/EpiMono.lean:311: epi_iff_surjective is a hand-written twin of epi_iff_surjective (via renamed)
+.lake/packages/mathlib/Mathlib/Algebra/Category/Grp/EpiMono.lean:317: epi_iff_range_eq_top is a hand-written twin of epi_iff_range_eq_top (via renamed)
+.lake/packages/mathlib/Mathlib/Algebra/Group/Action/End.lean:219: AddAction.toPerm_zero is a hand-written twin of MulAction.toPerm_one (via renamed)
+.lake/packages/mathlib/Mathlib/Algebra/Group/Submonoid/Membership.lean:491: mem_closure_singleton is a hand-written twin of mem_closure_singleton (via renamed)
+.lake/packages/mathlib/Mathlib/Algebra/Group/Submonoid/Membership.lean:494: closure_singleton_zero is a hand-written twin of closure_singleton_one (via renamed)
+.lake/packages/mathlib/Mathlib/Algebra/Group/Translate.lean:78: translate_sum_right is a hand-written twin of translate_prod_right (via auto)
+.lake/packages/mathlib/Mathlib/Data/Set/Insert.lean:306: Nonempty.eq_zero is a hand-written twin of Nonempty.eq_one (via auto)
+.lake/packages/mathlib/Mathlib/GroupTheory/FiniteAbelian/Basic.lean:161: finite_of_fg_torsion is a hand-written twin of finite_of_fg_torsion (via renamed)
+.lake/packages/mathlib/Mathlib/GroupTheory/Finiteness.lean:392: AddGroup.fg_def is a hand-written twin of Group.fg_def (via renamed)
+.lake/packages/mathlib/Mathlib/GroupTheory/GroupAction/Basic.lean:339: stabilizerEquivStabilizer_symm is a hand-written twin of stabilizerEquivStabilizer_symm (via renamed)
+.lake/packages/mathlib/Mathlib/NumberTheory/ArithmeticFunction/Moebius.lean:206: sum_eq_iff_sum_smul_moebius_eq is a hand-written twin of prod_eq_iff_prod_pow_moebius_eq (via renamed)
+.lake/packages/mathlib/Mathlib/NumberTheory/ArithmeticFunction/Moebius.lean:277: sum_eq_iff_sum_smul_moebius_eq_on is a hand-written twin of prod_eq_iff_prod_pow_moebius_eq_on (via renamed)
+.lake/packages/mathlib/Mathlib/RingTheory/FiniteType.lean:453: finiteType_iff_fg is a hand-written twin of finiteType_iff_fg (via renamed)
+.lake/packages/mathlib/Mathlib/RingTheory/FiniteType.lean:464: fg_of_finiteType is a hand-written twin of fg_of_finiteType (via renamed)
+.lake/packages/mathlib/Mathlib/RingTheory/FiniteType.lean:470: finiteType_iff_group_fg is a hand-written twin of finiteType_iff_group_fg (via renamed)
+.lake/packages/mathlib/Mathlib/Tactic/LinearCombination'.lean:48: pf_add_c is a hand-written twin of pf_mul_c (via auto)
+.lake/packages/mathlib/Mathlib/Tactic/LinearCombination'.lean:54: neg_pf is a hand-written twin of inv_pf (via auto)
+.lake/packages/mathlib/Mathlib/Tactic/LinearCombination'.lean:53: sub_pf is a hand-written twin of div_pf (via auto)
+.lake/packages/mathlib/Mathlib/Tactic/LinearCombination'.lean:50: add_pf is a hand-written twin of mul_pf (via auto)
+.lake/packages/mathlib/Mathlib/Tactic/LinearCombination'.lean:52: c_sub_pf is a hand-written twin of c_div_pf (via auto)
+.lake/packages/mathlib/Mathlib/Tactic/LinearCombination'.lean:51: pf_sub_c is a hand-written twin of pf_div_c (via auto)
+.lake/packages/mathlib/Mathlib/Tactic/LinearCombination'.lean:49: c_add_pf is a hand-written twin of c_mul_pf (via auto)
+-- 31 candidate(s)
+
+== verifying List.sum_singleton in .lake/packages/batteries/Batteries/Data/List/Lemmas.lean
+FAIL: `to_additive` is not imported in this module, so tagging the partner would mean adding an import: not a pure deletion
+
+== verifying List.sum_pair in .lake/packages/batteries/Batteries/Data/List/Lemmas.lean
+FAIL: `to_additive` is not imported in this module, so tagging the partner would mean adding an import: not a pure deletion
+
+== verifying List.sum_eq_foldr in .lake/packages/batteries/Batteries/Data/List/Lemmas.lean
+FAIL: `to_additive` is not imported in this module, so tagging the partner would mean adding an import: not a pure deletion
+
+== verifying Finset.expect_neg_index in .lake/packages/mathlib/Mathlib/Algebra/BigOperators/Expect.lean
+PASS: `Finset.expect_neg_index` is generated by `@[to_additive]` on `Finset.expect_inv_index` (the old statement still typechecks against it), so the hand-written one can be deleted (-2 lines)
+
+== verifying Finset.sum_Ico_reflect in .lake/packages/mathlib/Mathlib/Algebra/BigOperators/Intervals.lean
+PASS: `Finset.sum_Ico_reflect` is generated by `@[to_additive]` on `Finset.prod_Ico_reflect` (the old statement still typechecks against it), so the hand-written one can be deleted (-3 lines)
+  (printed form differs only by binder names:
+     was: ∀ {δ : Type u_4} [inst : AddCommMonoid δ] (f : ℕ → δ) (k : ℕ) {m n : ℕ}, m ≤ n + 1 → ∑ j ∈ Finset.Ico k m, f (n - j) = ∑ j ∈ Finset.Ico (n + 1 - m) (n + 1 - k), f j
+     now: ∀ {M : Type u_4} [inst : AddCommMonoid M] (f : ℕ → M) (k : ℕ) {m n : ℕ}, m ≤ n + 1 → ∑ j ∈ Finset.Ico k m, f (n - j) = ∑ j ∈ Finset.Ico (n + 1 - m) (n + 1 - k), f j)
+
+== verifying Finset.sum_range_reflect in .lake/packages/mathlib/Mathlib/Algebra/BigOperators/Intervals.lean
+PASS: `Finset.sum_range_reflect` is generated by `@[to_additive]` on `Finset.prod_range_reflect` (the old statement still typechecks against it), so the hand-written one can be deleted (-3 lines)
+  (printed form differs only by binder names:
+     was: ∀ {δ : Type u_4} [inst : AddCommMonoid δ] (f : ℕ → δ) (n : ℕ), ∑ j ∈ Finset.range n, f (n - 1 - j) = ∑ j ∈ Finset.range n, f j
+     now: ∀ {M : Type u_4} [inst : AddCommMonoid M] (f : ℕ → M) (n : ℕ), ∑ j ∈ Finset.range n, f (n - 1 - j) = ∑ j ∈ Finset.range n, f j)
+
+== verifying Finset.Nat.sum_antidiagonal_succ in .lake/packages/mathlib/Mathlib/Algebra/BigOperators/NatAntidiagonal.lean
+PASS: `Finset.Nat.sum_antidiagonal_succ` is generated by `@[to_additive]` on `Finset.Nat.prod_antidiagonal_succ` (the old statement still typechecks against it), so the hand-written one can be deleted (-3 lines)
+  (printed form differs only by binder names:
+     was: ∀ {N : Type u_3} [inst : AddCommMonoid N] {n : ℕ} {f : ℕ × ℕ → N}, ∑ p ∈ Finset.antidiagonal (n + 1), f p = f (0, n + 1) + ∑ p ∈ Finset.antidiagonal n, f (p.1 + 1, p.2)
+     now: ∀ {M : Type u_3} [inst : AddCommMonoid M] {n : ℕ} {f : ℕ × ℕ → M}, ∑ p ∈ Finset.antidiagonal (n + 1), f p = f (0, n + 1) + ∑ p ∈ Finset.antidiagonal n, f (p.1 + 1, p.2))
+
+== verifying Finset.Nat.sum_antidiagonal_succ' in .lake/packages/mathlib/Mathlib/Algebra/BigOperators/NatAntidiagonal.lean
+PASS: `Finset.Nat.sum_antidiagonal_succ'` is generated by `@[to_additive]` on `Finset.Nat.prod_antidiagonal_succ'` (the old statement still typechecks against it), so the hand-written one can be deleted (-3 lines)
+  (printed form differs only by binder names:
+     was: ∀ {N : Type u_3} [inst : AddCommMonoid N] {n : ℕ} {f : ℕ × ℕ → N}, ∑ p ∈ Finset.antidiagonal (n + 1), f p = f (n + 1, 0) + ∑ p ∈ Finset.antidiagonal n, f (p.1, p.2 + 1)
+     now: ∀ {M : Type u_3} [inst : AddCommMonoid M] {n : ℕ} {f : ℕ × ℕ → M}, ∑ p ∈ Finset.antidiagonal (n + 1), f p = f (n + 1, 0) + ∑ p ∈ Finset.antidiagonal n, f (p.1, p.2 + 1))
+note: section variable(s) N are now unused in .lake/packages/mathlib/Mathlib/Algebra/BigOperators/NatAntidiagonal.lean and can be deleted too
+
+== verifying AddCommGrpCat.tensorObj_eq in .lake/packages/mathlib/Mathlib/Algebra/Category/Grp/CartesianMonoidal.lean
+FAIL: rewrite breaks the file (or the statement no longer agrees):
+/workspace/request-project/.lake/packages/mathlib/Mathlib/Algebra/Category/Grp/CartesianMonoidal.lean:102:14: warning: `to_additive` correctly autogenerated target name for CommGrpCat.tensorObj_eq.
+You may remove the explicit argument tensorObj_eq.
+
+Note: This linter can be disabled with `set_option linter.translateGenerateName false`
+/workspace/request-project/.lake/packages/mathlib/Mathlib/Algebra/Category/Grp/CartesianMonoidal.lean:102:2: error: @[to_additive] failed to add declaration `AddCommGrpCat.tensorObj_eq`.
+  The translated value is not type correct.
+  For help, see the docstring of `to_additive`, section `Troubleshooting`.
+Application type mismatch: The argument
+  cartesianMonoidalCategory
+has type
+  CartesianMonoidalCategory CommGrpCat
+but is expected to have type
+  CartesianMonoidalCategory AddCommGrpCat
+in the application
+  @CartesianMonoidalCategory.toSemiCartesianMonoidalCategory AddCommGrpCat AddCommGrpCat.instCategory
+    cartesianMonoidalCategory
+AddCommGrpCat.tensorObj_eq : ∀ (G H : AddCommGrpCat), G ⊗ H = AddCommGrpCat.of (↑G × ↑H)
+/workspace/request-project/.lake/packages/mathlib/Mathlib/Algebra/Category/Grp/CartesianMonoidal.lean:143:35: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  MonoidalCategoryStruct AddCommGrpCat
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+warning: manifest out of date: source kind (git/path) of dependency 'mathlib' changed; use `lake update mathlib` to update it
+
+== verifying AddGrpCat.epi_iff_surjective in .lake/packages/mathlib/Mathlib/Algebra/Category/Grp/EpiMono.lean
+FAIL: rewrite breaks the file (or the statement no longer agrees):
+/workspace/request-project/.lake/packages/mathlib/Mathlib/Algebra/Category/Grp/EpiMono.lean:298:14: warning: `to_additive` correctly autogenerated target name for GrpCat.epi_iff_surjective.
+You may remove the explicit argument epi_iff_surjective.
+
+Note: This linter can be disabled with `set_option linter.translateGenerateName false`
+/workspace/request-project/.lake/packages/mathlib/Mathlib/Algebra/Category/Grp/EpiMono.lean:298:2: error: @[to_additive] failed to add declaration `AddGrpCat.epi_iff_surjective`.
+  The translated value is not type correct.
+  For help, see the docstring of `to_additive`, section `Troubleshooting`.
+Application type mismatch: The argument
+  A
+has type
+  AddGrpCat
+but is expected to have type
+  GrpCat
+in the application
+  @surjective_of_epi A
+@AddGrpCat.epi_iff_surjective : ∀ {A B : AddGrpCat} (f : A ⟶ B),
+  CategoryTheory.Epi f ↔ Function.Surjective ⇑(CategoryTheory.ConcreteCategory.hom f)
+warning: manifest out of date: source kind (git/path) of dependency 'mathlib' changed; use `lake update mathlib` to update it
+
+== verifying AddGrpCat.epi_iff_range_eq_top in .lake/packages/mathlib/Mathlib/Algebra/Category/Grp/EpiMono.lean
+FAIL: rewrite breaks the file (or the statement no longer agrees):
+/workspace/request-project/.lake/packages/mathlib/Mathlib/Algebra/Category/Grp/EpiMono.lean:301:14: warning: `to_additive` correctly autogenerated target name for GrpCat.epi_iff_range_eq_top.
+You may remove the explicit argument epi_iff_range_eq_top.
+
+Note: This linter can be disabled with `set_option linter.translateGenerateName false`
+/workspace/request-project/.lake/packages/mathlib/Mathlib/Algebra/Category/Grp/EpiMono.lean:301:2: error: @[to_additive] failed to add declaration `AddGrpCat.epi_iff_range_eq_top`.
+  The translated value is not type correct.
+  For help, see the docstring of `to_additive`, section `Troubleshooting`.
+Application type mismatch: The argument
+  A
+has type
+  AddGrpCat
+but is expected to have type
+  GrpCat
+in the application
+  @epi_iff_surjective A
+@AddGrpCat.epi_iff_range_eq_top : ∀ {A B : AddGrpCat} (f : A ⟶ B),
+  CategoryTheory.Epi f ↔ (AddGrpCat.Hom.hom f).range = ⊤
+warning: manifest out of date: source kind (git/path) of dependency 'mathlib' changed; use `lake update mathlib` to update it
+
+== verifying AddAction.toPerm_zero in .lake/packages/mathlib/Mathlib/Algebra/Group/Action/End.lean
+PASS: `AddAction.toPerm_zero` is generated by `@[to_additive]` on `MulAction.toPerm_one` (its pretty-printed statement is unchanged), so the hand-written one can be deleted (-3 lines)
+
+== verifying AddSubmonoid.mem_closure_singleton in .lake/packages/mathlib/Mathlib/Algebra/Group/Submonoid/Membership.lean
+FAIL: rewrite breaks the file (or the statement no longer agrees):
+/workspace/request-project/.lake/packages/mathlib/Mathlib/Algebra/Group/Submonoid/Membership.lean:194:14: warning: `to_additive` correctly autogenerated target name for Submonoid.mem_closure_singleton.
+You may remove the explicit argument mem_closure_singleton.
+
+Note: This linter can be disabled with `set_option linter.translateGenerateName false`
+/workspace/request-project/.lake/packages/mathlib/Mathlib/Algebra/Group/Submonoid/Membership.lean:194:2: error: @[to_additive] failed to add declaration `AddSubmonoid.mem_closure_singleton`.
+  The translated value is not type correct.
+  For help, see the docstring of `to_additive`, section `Troubleshooting`.
+Application type mismatch: The argument
+  inst✝.toAddZeroClass
+has type
+  AddZeroClass M
+but is expected to have type
+  MulOneClass M
+in the application
+  @mrange (Multiplicative ℕ) M Multiplicative.mulOneClass inst✝.toAddZeroClass
+@AddSubmonoid.mem_closure_singleton : ∀ {M : Type u_4} [inst : AddMonoid M] {x y : M},
+  y ∈ AddSubmonoid.closure {x} ↔ ∃ n, n • x = y
+/workspace/request-project/.lake/packages/mathlib/Mathlib/Algebra/Group/Submonoid/Membership.lean:558:92: error: typeclass instance problem is stuck
+  HSMul ?m.18 A A
+
+Note: Lean will not try to resolve this typeclass instance problem because the first type argument to `HSMul` contains metavariables. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+warning: manifest out of date: source kind (git/path) of dependency 'mathlib' changed; use `lake update mathlib` to update it
+
+== verifying AddSubmonoid.closure_singleton_zero in .lake/packages/mathlib/Mathlib/Algebra/Group/Submonoid/Membership.lean
+FAIL: rewrite breaks the file (or the statement no longer agrees):
+/workspace/request-project/.lake/packages/mathlib/Mathlib/Algebra/Group/Submonoid/Membership.lean:200:14: warning: `to_additive` correctly autogenerated target name for Submonoid.closure_singleton_one.
+You may remove the explicit argument closure_singleton_zero.
+
+Note: This linter can be disabled with `set_option linter.translateGenerateName false`
+/workspace/request-project/.lake/packages/mathlib/Mathlib/Algebra/Group/Submonoid/Membership.lean:200:2: error: @[to_additive] failed to add declaration `AddSubmonoid.closure_singleton_zero`.
+  The translated value is not type correct.
+  For help, see the docstring of `to_additive`, section `Troubleshooting`.
+Application type mismatch: The argument
+  inst✝
+has type
+  AddMonoid M
+but is expected to have type
+  Monoid M
+in the application
+  @mem_closure_singleton M inst✝
+@AddSubmonoid.closure_singleton_zero : ∀ {M : Type u_4} [inst : AddMonoid M], AddSubmonoid.closure {0} = ⊥
+/workspace/request-project/.lake/packages/mathlib/Mathlib/Algebra/Group/Submonoid/Membership.lean:560:78: error: Type mismatch
+  @AddSubmonoid.closure_singleton_zero
+has type
+  ∀ {M : Type ?u.28079} [inst : AddMonoid M], Eq.{?u.28079 + 1} (AddSubmonoid.closure {0}) ⊥
+but is expected to have type
+  ∀ {A : Type u_4} [inst : AddMonoid A], Eq.{1} (AddSubmonoid.closure {0}) ⊥
+warning: manifest out of date: source kind (git/path) of dependency 'mathlib' changed; use `lake update mathlib` to update it
+
+== verifying translate_sum_right in .lake/packages/mathlib/Mathlib/Algebra/Group/Translate.lean
+PASS: `translate_sum_right` is generated by `@[to_additive]` on `translate_prod_right` (the old statement still typechecks against it), so the hand-written one can be deleted (-2 lines)
+
+== verifying Set.Nonempty.eq_zero in .lake/packages/mathlib/Mathlib/Data/Set/Insert.lean
+FAIL: `to_additive` is not imported in this module, so tagging the partner would mean adding an import: not a pure deletion
+
+== verifying AddCommGroup.finite_of_fg_torsion in .lake/packages/mathlib/Mathlib/GroupTheory/FiniteAbelian/Basic.lean
+FAIL: rewrite breaks the file (or the statement no longer agrees):
+/workspace/request-project/.lake/packages/mathlib/Mathlib/GroupTheory/FiniteAbelian/Basic.lean:165:14: warning: `to_additive` correctly autogenerated target name for CommGroup.finite_of_fg_torsion.
+You may remove the explicit argument finite_of_fg_torsion.
+
+Note: This linter can be disabled with `set_option linter.translateGenerateName false`
+/workspace/request-project/.lake/packages/mathlib/Mathlib/GroupTheory/FiniteAbelian/Basic.lean:165:2: warning: declaration uses `sorry`
+/workspace/request-project/.lake/packages/mathlib/Mathlib/GroupTheory/FiniteAbelian/Basic.lean:167:24: error(lean.unknownIdentifier): Unknown constant `AddCommGroup.finite_of_fg_torsion`
+AddCommGroup.finite_of_fg_torsion : ∀ (G : Type u_1) [inst : AddCommGroup G] [AddGroup.FG G],
+  AddMonoid.IsTorsion G → Finite G
+warning: manifest out of date: source kind (git/path) of dependency 'mathlib' changed; use `lake update mathlib` to update it
+
+== verifying AddGroup.fg_def in .lake/packages/mathlib/Mathlib/GroupTheory/Finiteness.lean
+FAIL: rewrite breaks the file (or the statement no longer agrees):
+/workspace/request-project/.lake/packages/mathlib/Mathlib/GroupTheory/Finiteness.lean:389:14: warning: `to_additive` correctly autogenerated target name for Group.fg_def.
+You may remove the explicit argument AddGroup.fg_def.
+
+Note: This linter can be disabled with `set_option linter.translateGenerateName false`
+@AddGroup.fg_def : ∀ {G : Type u_5} [inst : AddGroup G], AddGroup.FG G ↔ ⊤.FG
+/workspace/request-project/.lake/packages/mathlib/Mathlib/GroupTheory/Finiteness.lean:596:61: error(lean.invalidField): Invalid field notation: Type of
+  ⊤
+is not known; cannot resolve field `FG`
+
+Hint: Consider replacing the field projection with a call to one of the following:
+  • `AddGroup.FG`
+  • `AddMonoid.FG`
+  • `AddSubgroup.FG`
+  • `AddSubmonoid.FG`
+  • `Group.FG`
+  • `Monoid.FG`
+  • `Subgroup.FG`
+  • `Submonoid.FG`
+warning: manifest out of date: source kind (git/path) of dependency 'mathlib' changed; use `lake update mathlib` to update it
+
+== verifying AddAction.stabilizerEquivStabilizer_symm in .lake/packages/mathlib/Mathlib/GroupTheory/GroupAction/Basic.lean
+FAIL: rewrite breaks the file (or the statement no longer agrees):
+/workspace/request-project/.lake/packages/mathlib/Mathlib/GroupTheory/GroupAction/Basic.lean:282:14: warning: `to_additive` correctly autogenerated target name for MulAction.stabilizerEquivStabilizer_symm.
+You may remove the explicit argument stabilizerEquivStabilizer_symm.
+
+Note: This linter can be disabled with `set_option linter.translateGenerateName false`
+/workspace/request-project/.lake/packages/mathlib/Mathlib/GroupTheory/GroupAction/Basic.lean:282:2: error: @[to_additive] failed to add declaration `AddAction.stabilizerEquivStabilizer_symm`.
+  The translated value is not type correct.
+  For help, see the docstring of `to_additive`, section `Troubleshooting`.
+Application type mismatch: The argument
+  inst✝¹
+has type
+  AddGroup G
+but is expected to have type
+  Group G
+in the application
+  @stabilizerEquivStabilizer G α inst✝¹
+@AddAction.stabilizerEquivStabilizer_symm : ∀ {G : Type u_1} {α : Type u_2} [inst : AddGroup G] [inst_1 : AddAction G α]
+  {g : G} {a b : α} (hg : b = g +ᵥ a),
+  AddEquiv.symm (MulAction.stabilizerEquivStabilizer hg) = MulAction.stabilizerEquivStabilizer ⋯
+/workspace/request-project/.lake/packages/mathlib/Mathlib/GroupTheory/GroupAction/Basic.lean:406:202: warning: The '⋯' token is used by the pretty printer to indicate omitted terms, and it should not be used directly. It logs this warning and then elaborates like '_'.
+
+The presence of '⋯' in pretty printing output is controlled by the 'pp.maxSteps', 'pp.deepTerms' and 'pp.proofs' options. These options can be further adjusted using 'pp.deepTerms.threshold' and 'pp.proofs.threshold'. If this '⋯' was copied from the Infoview, the hover there for the original '⋯' explains which of these options led to the omission.
+/workspace/request-project/.lake/packages/mathlib/Mathlib/GroupTheory/GroupAction/Basic.lean:406:166: error: don't know how to synthesize implicit argument `g`
+  @AddAction.stabilizerEquivStabilizer G α inst inst_1 (?m.27 hg) b a ⋯
+context:
+G : Type u_1
+α : Type u_2
+inst : AddGroup G
+inst_1 : AddAction G α
+g : G
+a b : α
+hg : b = g +ᵥ a
+⊢ G
+
+Note: Because this declaration's type has been explicitly provided, all parameter types and holes (e.g., `_`) in its header are resolved before its body is processed; information from the declaration body cannot be used to infer what these values should be
+/workspace/request-project/.lake/packages/mathlib/Mathlib/GroupTheory/GroupAction/Basic.lean:406:202: error: don't know how to synthesize placeholder for argument `hg`
+context:
+G : Type u_1
+α : Type u_2
+inst : AddGroup G
+inst_1 : AddAction G α
+g : G
+a b : α
+hg : b = g +ᵥ a
+⊢ a = ?m.27 hg +ᵥ b
+
+Note: Because this declaration's type has been explicitly provided, all parameter types and holes (e.g., `_`) in its header are resolved before its body is processed; information from the declaration body cannot be used to infer what these values should be
+/workspace/request-project/.lake/packages/mathlib/Mathlib/GroupTheory/GroupAction/Basic.lean:406:207: error: invalid projection
+  (MulAction.stabilizerEquivStabilizer hg).1
+from type
+  ↥(MulAction.stabilizer G a) ≃* ↥(MulAction.stabilizer G b)
+warning: manifest out of date: source kind (git/path) of dependency 'mathlib' changed; use `lake update mathlib` to update it
+
+== verifying ArithmeticFunction.sum_eq_iff_sum_smul_moebius_eq in .lake/packages/mathlib/Mathlib/NumberTheory/ArithmeticFunction/Moebius.lean
+FAIL: rewrite breaks the file (or the statement no longer agrees):
+/workspace/request-project/.lake/packages/mathlib/Mathlib/NumberTheory/ArithmeticFunction/Moebius.lean:209:6: error(lean.unknownIdentifier): Unknown identifier `sum_eq_iff_sum_smul_moebius_eq`
+/workspace/request-project/.lake/packages/mathlib/Mathlib/NumberTheory/ArithmeticFunction/Moebius.lean:208:78: error: unsolved goals
+R : Type u_1
+inst✝ : NonAssocRing R
+f g : ℕ → R
+⊢ (∀ n > 0, ∑ i ∈ n.divisors, f i = g n) ↔ ∀ n > 0, ∑ x ∈ n.divisorsAntidiagonal, ↑(μ x.1) * g x.2 = f n
+/workspace/request-project/.lake/packages/mathlib/Mathlib/NumberTheory/ArithmeticFunction/Moebius.lean:215:2: warning: declaration uses `sorry`
+/workspace/request-project/.lake/packages/mathlib/Mathlib/NumberTheory/ArithmeticFunction/Moebius.lean:219:3: error(lean.unknownIdentifier): Unknown identifier `sum_eq_iff_sum_smul_moebius_eq`
+@ArithmeticFunction.sum_eq_iff_sum_smul_moebius_eq : ∀ {R : Type u_2} [inst : AddCommGroup R] {f g : ℕ → R},
+  (∀ n > 0, ∑ i ∈ n.divisors, f i = g n) ↔
+    ∀ n > 0, ∑ x ∈ n.divisorsAntidiagonal, ArithmeticFunction.moebius x.1 • g x.2 = f n
+warning: manifest out of date: source kind (git/path) of dependency 'mathlib' changed; use `lake update mathlib` to update it
+
+== verifying ArithmeticFunction.sum_eq_iff_sum_smul_moebius_eq_on in .lake/packages/mathlib/Mathlib/NumberTheory/ArithmeticFunction/Moebius.lean
+FAIL: rewrite breaks the file (or the statement no longer agrees):
+/workspace/request-project/.lake/packages/mathlib/Mathlib/NumberTheory/ArithmeticFunction/Moebius.lean:283:26: error(lean.unknownIdentifier): Unknown identifier `sum_eq_iff_sum_smul_moebius_eq_on`
+/workspace/request-project/.lake/packages/mathlib/Mathlib/NumberTheory/ArithmeticFunction/Moebius.lean:292:6: error(lean.unknownIdentifier): Unknown identifier `sum_eq_iff_sum_smul_moebius_eq_on`
+/workspace/request-project/.lake/packages/mathlib/Mathlib/NumberTheory/ArithmeticFunction/Moebius.lean:291:73: error: unsolved goals
+R : Type u_1
+inst✝ : NonAssocRing R
+f g : ℕ → R
+s : Set ℕ
+hs : ∀ (m n : ℕ), m ∣ n → n ∈ s → m ∈ s
+⊢ (∀ n > 0, n ∈ s → ∑ i ∈ n.divisors, f i = g n) ↔ ∀ n > 0, n ∈ s → ∑ x ∈ n.divisorsAntidiagonal, ↑(μ x.1) * g x.2 = f n
+/workspace/request-project/.lake/packages/mathlib/Mathlib/NumberTheory/ArithmeticFunction/Moebius.lean:300:2: warning: declaration uses `sorry`
+/workspace/request-project/.lake/packages/mathlib/Mathlib/NumberTheory/ArithmeticFunction/Moebius.lean:305:3: error(lean.unknownIdentifier): Unknown identifier `sum_eq_iff_sum_smul_moebius_eq_on`
+@ArithmeticFunction.sum_eq_iff_sum_smul_moebius_eq_on : ∀ {R : Type u_2} [inst : AddCommGroup R] {f g : ℕ → R}
+  (s : Set ℕ),
+  (∀ (m n : ℕ), m ∣ n → n ∈ s → m ∈ s) →
+    ((∀ n > 0, n ∈ s → ∑ i ∈ n.divisors, f i = g n) ↔
+      ∀ n > 0, n ∈ s → ∑ x ∈ n.divisorsAntidiagonal, ArithmeticFunction.moebius x.1 • g x.2 = f n)
+warning: manifest out of date: source kind (git/path) of dependency 'mathlib' changed; use `lake update mathlib` to update it
+
+== verifying AddMonoidAlgebra.finiteType_iff_fg in .lake/packages/mathlib/Mathlib/RingTheory/FiniteType.lean
+FAIL: rewrite breaks the file (or the statement no longer agrees):
+/workspace/request-project/.lake/packages/mathlib/Mathlib/RingTheory/FiniteType.lean:454:2: error(lean.unknownIdentifier): Unknown identifier `finiteType_iff_fg`
+/workspace/request-project/.lake/packages/mathlib/Mathlib/RingTheory/FiniteType.lean:460:45: error(lean.unknownIdentifier): Unknown identifier `finiteType_iff_fg`
+/workspace/request-project/.lake/packages/mathlib/Mathlib/RingTheory/FiniteType.lean:582:14: warning: `to_additive` correctly autogenerated target name for MonoidAlgebra.finiteType_iff_fg.
+You may remove the explicit argument finiteType_iff_fg.
+
+Note: This linter can be disabled with `set_option linter.translateGenerateName false`
+/workspace/request-project/.lake/packages/mathlib/Mathlib/RingTheory/FiniteType.lean:582:2: warning: declaration uses `sorry`
+/workspace/request-project/.lake/packages/mathlib/Mathlib/RingTheory/FiniteType.lean:582:2: error: @[to_additive] failed to add declaration `AddMonoidAlgebra.finiteType_iff_fg`.
+  The translated value is not type correct.
+  For help, see the docstring of `to_additive`, section `Troubleshooting`.
+Application type mismatch: The argument
+  inst✝²
+has type
+  AddMonoid M
+but is expected to have type
+  Monoid M
+in the application
+  @Additive.addMonoid M inst✝²
+/workspace/request-project/.lake/packages/mathlib/Mathlib/RingTheory/FiniteType.lean:585:4: error(lean.unknownIdentifier): Unknown constant `AddMonoidAlgebra.finiteType_iff_fg`
+@AddMonoidAlgebra.finiteType_iff_fg : ∀ {R : Type u_1} {M : Type u_2} [inst : AddMonoid M] [inst_1 : CommRing R]
+  [Nontrivial R], Algebra.FiniteType R (AddMonoidAlgebra R M) ↔ AddMonoid.FG M
+warning: manifest out of date: source kind (git/path) of dependency 'mathlib' changed; use `lake update mathlib` to update it
+
+== verifying AddMonoidAlgebra.fg_of_finiteType in .lake/packages/mathlib/Mathlib/RingTheory/FiniteType.lean
+PASS: `AddMonoidAlgebra.fg_of_finiteType` is generated by `@[to_additive]` on `MonoidAlgebra.fg_of_finiteType` (the old statement still typechecks against it), so the hand-written one can be deleted (-4 lines)
+
+== verifying AddMonoidAlgebra.finiteType_iff_group_fg in .lake/packages/mathlib/Mathlib/RingTheory/FiniteType.lean
+PASS: `AddMonoidAlgebra.finiteType_iff_group_fg` is generated by `@[to_additive]` on `MonoidAlgebra.finiteType_iff_group_fg` (the old statement still typechecks against it), so the hand-written one can be deleted (-5 lines)
+
+== verifying AddMonoidAlgebra.finiteType_iff_fg in .lake/packages/mathlib/Mathlib/RingTheory/FiniteType.lean
+FAIL: rewrite breaks the file (or the statement no longer agrees):
+/workspace/request-project/.lake/packages/mathlib/Mathlib/RingTheory/FiniteType.lean:571:14: warning: `to_additive` correctly autogenerated target name for MonoidAlgebra.finiteType_iff_fg.
+You may remove the explicit argument finiteType_iff_fg.
+
+Note: This linter can be disabled with `set_option linter.translateGenerateName false`
+/workspace/request-project/.lake/packages/mathlib/Mathlib/RingTheory/FiniteType.lean:571:2: warning: declaration uses `sorry`
+/workspace/request-project/.lake/packages/mathlib/Mathlib/RingTheory/FiniteType.lean:571:2: error: @[to_additive] failed to add declaration `AddMonoidAlgebra.finiteType_iff_fg`.
+  The translated value is not type correct.
+  For help, see the docstring of `to_additive`, section `Troubleshooting`.
+Application type mismatch: The argument
+  inst✝²
+has type
+  AddMonoid M
+but is expected to have type
+  Monoid M
+in the application
+  @Additive.addMonoid M inst✝²
+/workspace/request-project/.lake/packages/mathlib/Mathlib/RingTheory/FiniteType.lean:574:4: error(lean.unknownIdentifier): Unknown constant `AddMonoidAlgebra.finiteType_iff_fg`
+@AddMonoidAlgebra.finiteType_iff_fg : ∀ {R : Type u_1} {M : Type u_2} [inst : AddMonoid M] [inst_1 : CommRing R]
+  [Nontrivial R], Algebra.FiniteType R (AddMonoidAlgebra R M) ↔ AddMonoid.FG M
+warning: manifest out of date: source kind (git/path) of dependency 'mathlib' changed; use `lake update mathlib` to update it
+
+== verifying Mathlib.Tactic.LinearCombination'.pf_add_c in .lake/packages/mathlib/Mathlib/Tactic/LinearCombination'.lean
+PASS: `Mathlib.Tactic.LinearCombination'.pf_add_c` is generated by `@[to_additive]` on `Mathlib.Tactic.LinearCombination'.pf_mul_c` (the old statement still typechecks against it), so the hand-written one can be deleted (-1 lines)
+
+== verifying Mathlib.Tactic.LinearCombination'.c_add_pf in .lake/packages/mathlib/Mathlib/Tactic/LinearCombination'.lean
+PASS: `Mathlib.Tactic.LinearCombination'.c_add_pf` is generated by `@[to_additive]` on `Mathlib.Tactic.LinearCombination'.c_mul_pf` (the old statement still typechecks against it), so the hand-written one can be deleted (-1 lines)
+
+== verifying Mathlib.Tactic.LinearCombination'.add_pf in .lake/packages/mathlib/Mathlib/Tactic/LinearCombination'.lean
+PASS: `Mathlib.Tactic.LinearCombination'.add_pf` is generated by `@[to_additive]` on `Mathlib.Tactic.LinearCombination'.mul_pf` (the old statement still typechecks against it), so the hand-written one can be deleted (-1 lines)
+
+== verifying Mathlib.Tactic.LinearCombination'.neg_pf in .lake/packages/mathlib/Mathlib/Tactic/LinearCombination'.lean
+PASS: `Mathlib.Tactic.LinearCombination'.neg_pf` is generated by `@[to_additive]` on `Mathlib.Tactic.LinearCombination'.inv_pf` (the old statement still typechecks against it), so the hand-written one can be deleted (-1 lines)
+
+== verifying Mathlib.Tactic.LinearCombination'.pf_sub_c in .lake/packages/mathlib/Mathlib/Tactic/LinearCombination'.lean
+PASS: `Mathlib.Tactic.LinearCombination'.pf_sub_c` is generated by `@[to_additive]` on `Mathlib.Tactic.LinearCombination'.pf_div_c` (the old statement still typechecks against it), so the hand-written one can be deleted (-1 lines)
+
+== verifying Mathlib.Tactic.LinearCombination'.c_sub_pf in .lake/packages/mathlib/Mathlib/Tactic/LinearCombination'.lean
+PASS: `Mathlib.Tactic.LinearCombination'.c_sub_pf` is generated by `@[to_additive]` on `Mathlib.Tactic.LinearCombination'.c_div_pf` (the old statement still typechecks against it), so the hand-written one can be deleted (-1 lines)
+
+== verifying Mathlib.Tactic.LinearCombination'.sub_pf in .lake/packages/mathlib/Mathlib/Tactic/LinearCombination'.lean
+PASS: `Mathlib.Tactic.LinearCombination'.sub_pf` is generated by `@[to_additive]` on `Mathlib.Tactic.LinearCombination'.div_pf` (the old statement still typechecks against it), so the hand-written one can be deleted (-1 lines)
+
+-- wrote diffs for 7 file(s) to contribution/to_additive-env-generated.patch
+-- 16/31 verified

@@ -1,0 +1,30 @@
+== Mathlib/Algebra/Ring/GeomSum.lean
+warning: manifest out of date: source kind (git/path) of dependency 'mathlib' changed; use `lake update mathlib` to update it
+OK Mathlib/Algebra/Ring/GeomSum.lean
+== Mathlib/Combinatorics/SetFamily/AhlswedeZhang.lean
+warning: manifest out of date: source kind (git/path) of dependency 'mathlib' changed; use `lake update mathlib` to update it
+OK Mathlib/Combinatorics/SetFamily/AhlswedeZhang.lean
+== Mathlib/Data/Nat/Choose/Sum.lean
+warning: manifest out of date: source kind (git/path) of dependency 'mathlib' changed; use `lake update mathlib` to update it
+OK Mathlib/Data/Nat/Choose/Sum.lean
+== Mathlib/GroupTheory/GroupAction/SubMulAction/Combination.lean
+warning: manifest out of date: source kind (git/path) of dependency 'mathlib' changed; use `lake update mathlib` to update it
+OK Mathlib/GroupTheory/GroupAction/SubMulAction/Combination.lean
+== Mathlib/MeasureTheory/Integral/IntervalIntegral/TrapezoidalRule.lean
+warning: manifest out of date: source kind (git/path) of dependency 'mathlib' changed; use `lake update mathlib` to update it
+OK Mathlib/MeasureTheory/Integral/IntervalIntegral/TrapezoidalRule.lean
+== Mathlib/NumberTheory/Bernoulli.lean
+warning: manifest out of date: source kind (git/path) of dependency 'mathlib' changed; use `lake update mathlib` to update it
+OK Mathlib/NumberTheory/Bernoulli.lean
+== Mathlib/NumberTheory/BernoulliPolynomials.lean
+warning: manifest out of date: source kind (git/path) of dependency 'mathlib' changed; use `lake update mathlib` to update it
+OK Mathlib/NumberTheory/BernoulliPolynomials.lean
+== Mathlib/Tactic/LinearCombination.lean
+warning: manifest out of date: source kind (git/path) of dependency 'mathlib' changed; use `lake update mathlib` to update it
+OK Mathlib/Tactic/LinearCombination.lean
+== Mathlib/Tactic/Ring/Common.lean
+warning: manifest out of date: source kind (git/path) of dependency 'mathlib' changed; use `lake update mathlib` to update it
+OK Mathlib/Tactic/Ring/Common.lean
+== Mathlib/Topology/EMetricSpace/BoundedVariation.lean
+warning: manifest out of date: source kind (git/path) of dependency 'mathlib' changed; use `lake update mathlib` to update it
+OK Mathlib/Topology/EMetricSpace/BoundedVariation.lean
