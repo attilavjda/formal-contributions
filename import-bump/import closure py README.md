@@ -1,0 +1,1 @@
+Scope Fit: Excellent. It is a completely dependency-free helper that parses module import blocks and computes transitive closures and import costs.  
