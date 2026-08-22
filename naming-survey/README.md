@@ -1,3 +1,11 @@
+This project was edited by [Aristotle](https://aristotle.harmonic.fun).
+
+To cite Aristotle:
+- Tag @Aristotle-Harmonic on GitHub PRs/issues
+- Add as co-author to commits:
+```
+Co-authored-by: Aristotle (Harmonic) <aristotle-harmonic@harmonic.fun>
+```
 # Summary of changes for run 1801234c-8e6e-4606-b236-11fafa0a83c2
 I ran a mechanical, whole-library measurement of Mathlib lemma naming and wrote it up with examples drawn from many different areas.
 
